@@ -1,0 +1,1810 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "category": "Biology"
+    },
+    {
+      "id": 2,
+      "category": "Movies"
+    },
+    {
+      "id": 3,
+      "category": "Literature"
+    },
+    {
+      "id": 4,
+      "category": "Geography"
+    },
+    {
+      "id": 5,
+      "category": "Science"
+    }
+  ],
+  "questions": [
+    {
+      "id": 0,
+      "sentence": "What is the capital of Spain?",
+      "answers": [
+        {"id": 0, "sentence": "Tenerife"},
+        {"id": 1, "sentence": "Madrid"},
+        {"id": 2, "sentence": "Barcelona"},
+        {"id": 3, "sentence": "Valencia"},
+        {"id": 4, "sentence": "Seville"}
+      ],
+      "rightAnswer": 1,
+      "category": "Geography"
+    },
+    {
+      "id": 1,
+      "sentence": "What is the largest planet in our solar system?",
+      "answers": [
+        {"id": 0, "sentence": "Mars"},
+        {"id": 1, "sentence": "Jupiter"},
+        {"id": 2, "sentence": "Saturn"},
+        {"id": 3, "sentence": "Neptune"},
+        {"id": 4, "sentence": "Uranus"}
+      ],
+      "rightAnswer": 1,
+      "category": "Science"
+    },
+    {
+      "id": 2,
+      "sentence": "Who wrote the novel 'To Kill a Mockingbird'?",
+      "answers": [
+        {"id": 1, "sentence": "Jack Thorne"},
+        {"id": 1, "sentence": "Harper Lee"},
+        {"id": 2, "sentence": "Ernest Hemingway"},
+        {"id": 3, "sentence": "Mark Twain"},
+        {"id": 4, "sentence": "J.K. Rowling"}
+      ],
+      "rightAnswer": 1,
+      "category": "Literature"
+    },
+    {
+      "id": 3,
+      "sentence": "What is the name of the 2019 movie where Joaquin Phoenix played the character of Joker?",
+      "answers": [
+        {"id": 0, "sentence": "Justice League"},
+        {"id": 1, "sentence": "Joker"},
+        {"id": 2, "sentence": "The Dark Knight"},
+        {"id": 3, "sentence": "Batman Begins"},
+        {"id": 4, "sentence": "Suicide Squad"}
+      ],
+      "rightAnswer": 1,
+      "category": "Movies"
+    },
+    {
+      "id": 4,
+      "sentence": "What is the capital of Canada?",
+      "answers": [
+        {"id": 0, "sentence": "Boston"},
+        {"id": 1, "sentence": "Ottawa"},
+        {"id": 2, "sentence": "Toronto"},
+        {"id": 3, "sentence": "Montreal"},
+        {"id": 4, "sentence": "Vancouver"}
+      ],
+      "rightAnswer": 1,
+      "category": "Geography"
+    },
+    {
+      "id": 5,
+      "sentence": "What is the largest mammal in the world?",
+      "answers": [
+        {"id": 0, "sentence": "Dolphin"},
+        {"id": 1, "sentence": "Blue whale"},
+        {"id": 2, "sentence": "African elephant"},
+        {"id": 3, "sentence": "Hippopotamus"},
+        {"id": 4, "sentence": "Polar bear"}
+      ],
+      "rightAnswer": 1,
+      "category": "Biology"
+    },
+    {
+      "id":6,
+      "sentence": "Who is the author of the 'Harry Potter' book series?",
+      "answers": [
+        {"id": 0, "sentence": "Ernest Hemingway"},
+        {"id": 1, "sentence": "J.K. Rowling"},
+        {"id": 2, "sentence": "Stephen King"},
+        {"id": 3, "sentence": "George R.R. Martin"},
+        {"id": 4, "sentence": "Dan Brown"}
+      ],
+      "rightAnswer": 1,
+      "category": "Literature"
+    },
+    {
+      "id": 7,
+      "sentence": "What is the largest ocean in the world?",
+      "answers": [
+        {"id": 0, "sentence": "Yellow Sea"},
+        {"id": 1, "sentence": "Pacific Ocean"},
+        {"id": 2, "sentence": "Atlantic Ocean"},
+        {"id": 3, "sentence": "Indian Ocean"},
+        {"id": 4, "sentence": "Black Sea" }
+      ],
+      "rightAnswer": 1,
+      "category": "Geography"
+    },
+    {
+      "id":8,
+      "sentence": "Who is the father of evolution theory?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Nichola Tesla"
+        },
+        {
+          "id": 1,
+          "sentence": "Carlos J. Finlay"
+        },
+        {
+          "id": 2,
+          "sentence": "Thomas Henry Huxley"
+        },
+        {
+          "id": 3,
+          "sentence": "Charles Darwin"
+        },
+        {
+          "id": 4,
+          "sentence": "Charles Elton"
+        }
+      ],
+      "rightAnswer": 3,
+      "category": "Biology"
+    },
+    {
+      "id":9,
+      "sentence": "How many chromosome has an human being?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "52"
+        },
+        {
+          "id": 1,
+          "sentence": "50"
+        },
+        {
+          "id": 2,
+          "sentence": "46"
+        },
+        {
+          "id": 3,
+          "sentence": "48"
+        },
+        {
+          "id": 4,
+          "sentence": "44"
+        }
+      ],
+      "rightAnswer": 3,
+      "category": "Biology"
+    },
+    {
+      "id":10,
+      "sentence": "What is the biggest organ of human body?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Heart"
+        },
+        {
+          "id": 1,
+          "sentence": "Large intestine"
+        },
+        {
+          "id": 2,
+          "sentence": "Small intestine"
+        },
+        {
+          "id": 3,
+          "sentence": "Lung"
+        },
+        {
+          "id": 4,
+          "sentence": "Skin"
+        }
+      ],
+      "rightAnswer": 4,
+      "category": "Biology"
+    },
+    {
+      "id":11,
+      "sentence": "How many bones does an adult human have?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "204"
+        },
+        {
+          "id": 1,
+          "sentence": "200"
+        },
+        {
+          "id": 2,
+          "sentence": "206"
+        },
+        {
+          "id": 3,
+          "sentence": "205"
+        },
+        {
+          "id": 4,
+          "sentence": "203"
+        }
+      ],
+      "rightAnswer": 2,
+      "category": "Biology"
+    },
+    {
+      "id":12,
+      "sentence": "What is the smallest organ of human body?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "pineal gland"
+        },
+        {
+          "id": 1,
+          "sentence": "lymph glands"
+        },
+        {
+          "id": 2,
+          "sentence": "Endocrine glands"
+        },
+        {
+          "id": 3,
+          "sentence": "thyroid"
+        },
+        {
+          "id": 4,
+          "sentence": "parathyroids"
+        }
+      ],
+      "rightAnswer": 0,
+      "category": "Biology"
+    },
+    {
+      "id":13,
+      "sentence": "What is the process by which plants convert light energy into chemical energy?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Photosynthesis"
+        },
+        {
+          "id": 1,
+          "sentence": "Respiration"
+        },
+        {
+          "id": 2,
+          "sentence": "Fermentation"
+        },
+        {
+          "id": 3,
+          "sentence": "Transpiration"
+        },
+        {
+          "id": 4,
+          "sentence": "Digestion"
+        }
+      ],
+      "rightAnswer": 0,
+      "category": "Biology"
+    },
+    {
+      "id":14,
+      "sentence": "Which organelle is known as the 'powerhouse of the cell'?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Nucleus"
+        },
+        {
+          "id": 1,
+          "sentence": "Mitochondria"
+        },
+        {
+          "id": 2,
+          "sentence": "Endoplasmic reticulum"
+        },
+        {
+          "id": 3,
+          "sentence": "Chloroplast"
+        },
+        {
+          "id": 4,
+          "sentence": "Golgi apparatus"
+        }
+      ],
+      "rightAnswer": 1,
+      "category": "Biology"
+    },
+    {
+      "id":15,
+      "sentence": "What is the basic unit of life?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Atom"
+        },
+        {
+          "id": 1,
+          "sentence": "Molecule"
+        },
+        {
+          "id": 2,
+          "sentence": "Cell"
+        },
+        {
+          "id": 3,
+          "sentence": "Tissue"
+        },
+        {
+          "id": 4,
+          "sentence": "Organ"
+        }
+      ],
+      "rightAnswer": 3,
+      "category": "Biology"
+    },
+    {
+      "id":16,
+      "sentence": "Which molecule stores genetic information in a cell?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Lipid"
+        },
+        {
+          "id": 1,
+          "sentence": "Carbohydrate"
+        },
+        {
+          "id": 2,
+          "sentence": "Protein"
+        },
+        {
+          "id": 3,
+          "sentence": "RNA"
+        },
+        {
+          "id": 4,
+          "sentence": "DNA"
+        }
+      ],
+      "rightAnswer": 4,
+      "category": "Biology"
+    },
+    {
+      "id":17,
+      "sentence": "Which gas is essential for photosynthesis to occur?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Carbon dioxide (CO2)"
+        },
+        {
+          "id": 1,
+          "sentence": "Oxygen (O2)"
+        },
+        {
+          "id": 2,
+          "sentence": "Nitrogen (N2)"
+        },
+        {
+          "id": 3,
+          "sentence": "Hydrogen (H2)"
+        },
+        {
+          "id": 4,
+          "sentence": "Methane (CH4)"
+        }
+      ],
+      "rightAnswer": 1,
+      "category": "Biology"
+    },
+    {
+      "id":18,
+      "sentence": "What is the process by which cells break down glucose to release energy?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Cell division"
+        },
+        {
+          "id": 1,
+          "sentence": "Cellular respiration"
+        },
+        {
+          "id": 2,
+          "sentence": "Cell metabolism"
+        },
+        {
+          "id": 3,
+          "sentence": "Cell synthesis"
+        },
+        {
+          "id": 4,
+          "sentence": "Cell excretion"
+        }
+      ],
+      "rightAnswer": 1,
+      "category": "Biology"
+    },
+    {
+      "id":19,
+      "sentence": "Which system is responsible for transporting blood and nutrients throughout the body?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Digestive system"
+        },
+        {
+          "id": 1,
+          "sentence": "Circulatory system"
+        },
+        {
+          "id": 2,
+          "sentence": "Nervous system"
+        },
+        {
+          "id": 3,
+          "sentence": "Endocrine system"
+        },
+        {
+          "id": 4,
+          "sentence": "Respiratory system"
+        }
+      ],
+      "rightAnswer": 1,
+      "category": "Biology"
+    },
+    {
+      "id":20,
+      "sentence": "Which part of the plant holds the reproductive structures?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Leaf"
+        },
+        {
+          "id": 1,
+          "sentence": "Root"
+        },
+        {
+          "id": 2,
+          "sentence": "Flower"
+        },
+        {
+          "id": 3,
+          "sentence": "Stem"
+        },
+        {
+          "id": 4,
+          "sentence": "Fruit"
+        }
+      ],
+      "rightAnswer": 2,
+      "category": "Biology"
+    },
+    {
+      "id":21,
+      "sentence": "What is the process by which water moves through a semi-permeable membrane to balance concentrations?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Diffusion"
+        },
+        {
+          "id": 1,
+          "sentence": "Active transport"
+        },
+        {
+          "id": 2,
+          "sentence": "Facilitated diffusion"
+        },
+        {
+          "id": 3,
+          "sentence": "Osmosis"
+        },
+        {
+          "id": 4,
+          "sentence": "Filtration"
+        }
+      ],
+      "rightAnswer": 3,
+      "category": "Biology"
+    },
+    {
+      "id":22,
+      "sentence": "Which molecule carries oxygen in the blood?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Insulin"
+        },
+        {
+          "id": 1,
+          "sentence": "Glucose"
+        },
+        {
+          "id": 2,
+          "sentence": "Chlorophyll"
+        },
+        {
+          "id": 3,
+          "sentence": "Antibodies"
+        },
+        {
+          "id": 4,
+          "sentence": "Hemoglobin"
+        }
+      ],
+      "rightAnswer": 4,
+      "category": "Biology"
+    },
+    {
+      "id":23,
+      "sentence": "What is the process by which an organism develops from a fertilized egg?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Metamorphosis"
+        },
+        {
+          "id": 1,
+          "sentence": "Reproduction"
+        },
+        {
+          "id": 2,
+          "sentence": "Photosynthesis"
+        },
+        {
+          "id": 3,
+          "sentence": "Germination"
+        },
+        {
+          "id": 4,
+          "sentence": "Embryogenesis"
+        }
+      ],
+      "rightAnswer": 4,
+      "category": "Biology"
+    },
+    {
+      "id":24,
+      "sentence": "Which type of biomolecule is an enzyme?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Carbohydrate"
+        },
+        {
+          "id": 1,
+          "sentence": "Lipid"
+        },
+        {
+          "id": 2,
+          "sentence": "Nucleic acid"
+        },
+        {
+          "id": 3,
+          "sentence": "Protein"
+        },
+        {
+          "id": 4,
+          "sentence": "Hormone"
+        }
+      ],
+      "rightAnswer": 3,
+      "category": "Biology"
+    },
+    {
+      "id":25,
+      "sentence": "What is the study of heredity and variation in living organisms?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Taxonomy"
+        },
+        {
+          "id": 1,
+          "sentence": "Physiology"
+        },
+        {
+          "id": 2,
+          "sentence": "Genetics"
+        },
+        {
+          "id": 3,
+          "sentence": "Anatomy"
+        },
+        {
+          "id": 4,
+          "sentence": "Ecology"
+        }
+      ],
+      "rightAnswer": 3,
+      "category": "Biology"
+    },
+    {
+      "id":26,
+      "sentence": "Which type of blood cell is responsible for immune responses?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Muscle cell"
+        },
+        {
+          "id": 1,
+          "sentence": "Neuron"
+        },
+        {
+          "id": 2,
+          "sentence": "White blood cell"
+        },
+        {
+          "id": 3,
+          "sentence": "Red blood cell"
+        },
+        {
+          "id": 4,
+          "sentence": "Platelet"
+        }
+      ],
+      "rightAnswer": 2,
+      "category": "Biology"
+    },
+    {
+      "id":27,
+      "sentence": "What is the process by which plants lose water vapor through tiny pores?",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Osmosis"
+        },
+        {
+          "id": 1,
+          "sentence": "Transpiration"
+        },
+        {
+          "id": 2,
+          "sentence": "Diffusion"
+        },
+        {
+          "id": 3,
+          "sentence": "Respiration"
+        },
+        {
+          "id": 4,
+          "sentence": "Photosynthesis"
+        }
+      ],
+      "rightAnswer": 1,
+      "category": "Biology"
+    },
+    {
+      "id":28,
+      "sentence": "What is the green pigment found in plant cells that is involved in photosynthesis??",
+      "answers": [
+        {
+          "id": 0,
+          "sentence": "Chlorophyll"
+        },
+        {
+          "id": 1,
+          "sentence": "Melanin"
+        },
+        {
+          "id": 2,
+          "sentence": "Hemoglobin"
+        },
+        {
+          "id": 3,
+          "sentence": "Carotene"
+        },
+        {
+          "id": 4,
+          "sentence": "Xanthophyll"
+        }
+      ],
+      "rightAnswer": 0,
+      "category": "Biology"
+    },
+    {
+      "id": 29,
+      "sentence": "Who directed the movie 'Inception'?",
+      "answers": [
+        {"id": 0, "sentence": "James Cameron"},
+        {"id": 1, "sentence": "Christopher Nolan"},
+        {"id": 2, "sentence": "Steven Spielberg"},
+        {"id": 3, "sentence": "Quentin Tarantino"},
+        {"id": 4, "sentence": "Martin Scorsese"}
+      ],
+      "rightAnswer": 1,
+      "category": "Movies"
+    },
+    {
+      "id": 30,
+      "sentence": "Which movie won the Academy Award for Best Picture in 2020?",
+      "answers": [
+        {"id": 0, "sentence": "The Irishman"},
+        {"id": 1, "sentence": "Once Upon a Time in Hollywood"},
+        {"id": 2, "sentence": "Joker"},
+        {"id": 3, "sentence": "1917"},
+        {"id": 4, "sentence": "Parasite"}
+      ],
+      "rightAnswer": 4,
+      "category": "Movies"
+    },
+    {
+      "id": 31,
+      "sentence": "Which actor played the role of Tony Stark / Iron Man in the Marvel Cinematic Universe?",
+      "answers": [
+        {"id": 0, "sentence": "Tom Holland"},
+        {"id": 1, "sentence": "Mark Ruffalo"},
+        {"id": 2, "sentence": "Chris Hemsworth"},
+        {"id": 3, "sentence": "Robert Downey Jr."},
+        {"id": 4, "sentence": "Chris Evans"}
+      ],
+      "rightAnswer": 3,
+      "category": "Movies"
+    },
+    {
+      "id": 32,
+      "sentence": "In the movie 'The Shawshank Redemption,' who played the character Andy Dufresne?",
+      "answers": [
+        {"id": 0, "sentence": "Tim Robbins"},
+        {"id": 1, "sentence": "Morgan Freeman"},
+        {"id": 2, "sentence": "Tom Hanks"},
+        {"id": 3, "sentence": "Brad Pitt"},
+        {"id": 4, "sentence": "Leonardo DiCaprio"}
+      ],
+      "rightAnswer": 0,
+      "category": "Movies"
+    },
+    {
+      "id": 33,
+      "sentence": "Which movie features a theme park filled with cloned dinosaurs?",
+      "answers": [
+        {"id": 0, "sentence": "Godzilla"},
+        {"id": 1, "sentence": "Pacific Rim"},
+        {"id": 2, "sentence": "Transformers"},
+        {"id": 3, "sentence": "Jurassic Park"},
+        {"id": 4, "sentence": "Avatar"}
+      ],
+      "rightAnswer": 3,
+      "category": "Movies"
+    },
+    {
+      "id": 34,
+      "sentence": "In 'The Lord of the Rings' film trilogy, who played the role of Gandalf?",
+      "answers": [
+        {"id": 0, "sentence": "Ian McKellen"},
+        {"id": 1, "sentence": "Anthony Hopkins"},
+        {"id": 2, "sentence": "Liam Neeson"},
+        {"id": 3, "sentence": "Sean Connery"},
+        {"id": 4, "sentence": "Patrick Stewart"}
+      ],
+      "rightAnswer": 0,
+      "category": "Movies"
+    },
+    {
+      "id": 35,
+      "sentence": "Which movie is about a young boy who discovers he's a wizard and attends Hogwarts School?",
+      "answers": [
+        {"id": 0, "sentence": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe"},
+        {"id": 1, "sentence": "Harry Potter and the Sorcerer's Stone"},
+        {"id": 2, "sentence": "Percy Jackson & the Olympians: The Lightning Thief"},
+        {"id": 3, "sentence": "Eragon"},
+        {"id": 4, "sentence": "The Golden Compass"}
+      ],
+      "rightAnswer": 1,
+      "category": "Movies"
+    },
+    {
+      "id": 36,
+      "sentence": "Who played the Joker in the movie 'The Dark Knight' (2008)?",
+      "answers": [
+        {"id": 0, "sentence": "Willem Dafoe"},
+        {"id": 1, "sentence": "Jared Leto"},
+        {"id": 2, "sentence": "Heath Ledger"},
+        {"id": 3, "sentence": "Joaquin Phoenix"},
+        {"id": 4, "sentence": "Jack Nicholson"}
+      ],
+      "rightAnswer": 2,
+      "category": "Movies"
+    },
+    {
+      "id": 37,
+      "sentence": "Which movie is about a fish named Nemo who gets separated from his father?",
+      "answers": [
+        {"id": 0, "sentence": "Finding Nemo"},
+        {"id": 1, "sentence": "The Little Mermaid"},
+        {"id": 2, "sentence": "Shark Tale"},
+        {"id": 3, "sentence": "A Shark's Tale"},
+        {"id": 4, "sentence": "Under the Sea"}
+      ],
+      "rightAnswer": 0,
+      "category": "Movies"
+    },
+    {
+      "id": 38,
+      "sentence": "In the movie 'Forrest Gump,' what does Forrest's mother say life is like?",
+      "answers": [
+        {"id": 0, "sentence": "A feather"},
+        {"id": 1, "sentence": "A highway"},
+        {"id": 2, "sentence": "A puzzle"},
+        {"id": 3, "sentence": "A roller coaster"},
+        {"id": 4, "sentence": "A box of chocolates"}
+      ],
+      "rightAnswer": 4,
+      "category": "Movies"
+    },
+    {
+      "id": 39,
+      "sentence": "Which movie is about a young woman who pretends to be a male soldier to take her father's place in the army?",
+      "answers": [
+        {"id": 0, "sentence": "Brave"},
+        {"id": 1, "sentence": "Pocahontas"},
+        {"id": 2, "sentence": "Cinderella"},
+        {"id": 3, "sentence": "Mulan"},
+        {"id": 4, "sentence": "Beauty and the Beast"}
+      ],
+      "rightAnswer": 3,
+      "category": "Movies"
+    },
+    {
+      "id": 40,
+      "sentence": "Who directed the movie 'The Godfather'?",
+      "answers": [
+        {"id": 0, "sentence": "Francis Ford Coppola"},
+        {"id": 1, "sentence": "Alfred Hitchcock"},
+        {"id": 2, "sentence": "Stanley Kubrick"},
+        {"id": 3, "sentence": "Martin Scorsese"},
+        {"id": 4, "sentence": "Quentin Tarantino"}
+      ],
+      "rightAnswer": 0,
+      "category": "Movies"
+    },
+    {
+      "id": 41,
+      "sentence": "Which movie features dinosaurs brought to a modern-day city through a magical forest?",
+      "answers": [
+        {"id": 0, "sentence": "Jurassic Park"},
+        {"id": 1, "sentence": "The Lost World: Jurassic Park"},
+        {"id": 2, "sentence": "Jurassic Park III"},
+        {"id": 3, "sentence": "Jurassic World"},
+        {"id": 4, "sentence": "The Flintstones"}
+      ],
+      "rightAnswer": 4,
+      "category": "Movies"
+    },
+    {
+      "id": 42,
+      "sentence": "In the movie 'The Matrix,' what color pill does Neo take?",
+      "answers": [
+        {"id": 0, "sentence": "Blue"},
+        {"id": 1, "sentence": "Red"},
+        {"id": 2, "sentence": "Yellow"},
+        {"id": 3, "sentence": "Green"},
+        {"id": 4, "sentence": "Purple"}
+      ],
+      "rightAnswer": 1,
+      "category": "Movies"
+    },
+    {
+      "id": 43,
+      "sentence": "Who played the character Jack Dawson in the movie 'Titanic'?",
+      "answers": [
+        {"id": 0, "sentence": "Brad Pitt"},
+        {"id": 1, "sentence": "Matt Damon"},
+        {"id": 2, "sentence": "Leonardo DiCaprio"},
+        {"id": 3, "sentence": "Johnny Depp"},
+        {"id": 4, "sentence": "Tom Hanks"}
+      ],
+      "rightAnswer": 2,
+      "category": "Movies"
+    },
+    {
+      "id": 44,
+      "sentence": "Which movie features a young girl named Dorothy who gets transported to the magical land of Oz?",
+      "answers": [
+        {"id": 0, "sentence": "Alice in Wonderland"},
+        {"id": 1, "sentence": "Snow White and the Seven Dwarfs"},
+        {"id": 2, "sentence": "The Wizard of Oz"},
+        {"id": 3, "sentence": "Peter Pan"},
+        {"id": 4, "sentence": "Cinderella"}
+      ],
+      "rightAnswer": 2,
+      "category": "Movies"
+    },
+    {
+      "id": 45,
+      "sentence": "Who played the character of Clarice Starling in the movie 'The Silence of the Lambs'?",
+      "answers": [
+        {"id": 0, "sentence": "Jodie Foster"},
+        {"id": 1, "sentence": "Meryl Streep"},
+        {"id": 2, "sentence": "Julia Roberts"},
+        {"id": 3, "sentence": "Angelina Jolie"},
+        {"id": 4, "sentence": "Halle Berry"}
+      ],
+      "rightAnswer": 1,
+      "category": "Movies"
+    },
+    {
+      "id": 46,
+      "sentence": "Which movie is about a clownfish named Marlin searching for his missing son?",
+      "answers": [
+        {"id": 0, "sentence": "Under the Sea"},
+        {"id": 1, "sentence": "Finding Nemo"},
+        {"id": 2, "sentence": "A Shark's Tale"},
+        {"id": 3, "sentence": "Shark Tale"},
+        {"id": 4, "sentence": "The Little Mermaid"}
+      ],
+      "rightAnswer": 1,
+      "category": "Movies"
+    },
+    {
+      "id": 47,
+      "sentence": "In the movie 'The Shawshank Redemption,' who played the character Ellis Boyd 'Red' Redding?",
+      "answers": [
+        {"id": 0, "sentence": "Tim Robbins"},
+        {"id": 1, "sentence": "Morgan Freeman"},
+        {"id": 2, "sentence": "Tom Hanks"},
+        {"id": 3, "sentence": "Brad Pitt"},
+        {"id": 4, "sentence": "Leonardo DiCaprio"}
+      ],
+      "rightAnswer": 1,
+      "category": "Movies"
+    },
+    {
+      "id": 48,
+      "sentence": "Which movie features a character named James Bond?",
+      "answers": [
+        {"id": 0, "sentence": "Mission: Impossible"},
+        {"id": 1, "sentence": "The Bourne Identity"},
+        {"id": 2, "sentence": "Die Another Day"},
+        {"id": 3, "sentence": "Taken"},
+        {"id": 4, "sentence": "Casino Royale"}
+      ],
+      "rightAnswer": 4,
+      "category": "Movies"
+    },
+    {
+      "id": 49,
+      "sentence": "In 'The Lord of the Rings' trilogy, what is the name of the hobbit played by Elijah Wood?",
+      "answers": [
+        {"id": 0, "sentence": "Frodo Baggins"},
+        {"id": 1, "sentence": "Samwise Gamgee"},
+        {"id": 2, "sentence": "Bilbo Baggins"},
+        {"id": 3, "sentence": "Gandalf"},
+        {"id": 4, "sentence": "Legolas"}
+      ],
+      "rightAnswer": 0,
+      "category": "Movies"
+    },
+    {
+      "id": 50,
+      "sentence": "Who wrote the play 'Romeo and Juliet'?",
+      "answers": [
+        {"id": 0, "sentence": "William Shakespeare"},
+        {"id": 1, "sentence": "Jane Austen"},
+        {"id": 2, "sentence": "Charles Dickens"},
+        {"id": 3, "sentence": "Mark Twain"},
+        {"id": 4, "sentence": "Leo Tolstoy"}
+      ],
+      "rightAnswer": 0,
+      "category": "Literature"
+    },
+    {
+      "id": 51,
+      "sentence": "Which novel features the character Jay Gatsby?",
+      "answers": [
+        {"id": 0, "sentence": "To Kill a Mockingbird"},
+        {"id": 1, "sentence": "The Great Gatsby"},
+        {"id": 2, "sentence": "Pride and Prejudice"},
+        {"id": 3, "sentence": "1984"},
+        {"id": 4, "sentence": "The Catcher in the Rye"}
+      ],
+      "rightAnswer": 1,
+      "category": "Literature"
+    },
+    {
+      "id": 52,
+      "sentence": "In 'Lord of the Rings', who is Frodo's loyal companion and best friend?",
+      "answers": [
+        {"id": 0, "sentence": "Gandalf"},
+        {"id": 1, "sentence": "Aragorn"},
+        {"id": 2, "sentence": "Legolas"},
+        {"id": 3, "sentence": "Samwise Gamgee"},
+        {"id": 4, "sentence": "Gollum"}
+      ],
+      "rightAnswer": 3,
+      "category": "Literature"
+    },
+    {
+      "id": 53,
+      "sentence": "Which classic novel follows the life of an orphan named Pip",
+      "answers": [
+        {"id": 0, "sentence": "Oliver Twist"},
+        {"id": 1, "sentence": "Great Expectations"},
+        {"id": 2, "sentence": "Moby-Dick"},
+        {"id": 3, "sentence": "Wuthering Heights"},
+        {"id": 4, "sentence": "Anna Karenina"}
+      ],
+      "rightAnswer": 1,
+      "category": "Literature"
+    },
+    {
+      "id": 54,
+      "sentence": "Who wrote the poem 'The Raven'?",
+      "answers": [
+        {"id": 0, "sentence": "Walt Whitman"},
+        {"id": 1, "sentence": "Emily Dickinson"},
+        {"id": 2, "sentence": "Robert Frost"},
+        {"id": 3, "sentence": "Edgar Allan Poe"},
+        {"id": 4, "sentence": "Langston Hughes"}
+      ],
+      "rightAnswer": 3,
+      "category": "Literature"
+    },
+    {
+      "id": 55,
+      "sentence": "In 'To Kill a Mockingbird', who is Atticus Finch's daughter?",
+      "answers": [
+        {"id": 0, "sentence": "Scout"},
+        {"id": 1, "sentence": "Jane"},
+        {"id": 2, "sentence": "Emma"},
+        {"id": 3, "sentence": "Mary"},
+        {"id": 4, "sentence": "Hermione"}
+      ],
+      "rightAnswer": 0,
+      "category": "Literature"
+    },
+    {
+      "id": 56,
+      "sentence": "Which dystopian novel features a society divided into factions based on personality traits?",
+      "answers": [
+        {"id": 0, "sentence": "Brave New World"},
+        {"id": 1, "sentence": "The Maze Runner"},
+        {"id": 2, "sentence": "Divergent"},
+        {"id": 3, "sentence": "Fahrenheit 451"},
+        {"id": 4, "sentence": "The Handmaid's Tale"}
+      ],
+      "rightAnswer": 2,
+      "category": "Literature"
+    },
+    {
+      "id": 57,
+      "sentence": "In 'Pride and Prejudice', who is the proud and wealthy bachelor that Elizabeth Bennet initially dislikes?",
+      "answers": [
+        {"id": 0, "sentence": "Mr. Collins"},
+        {"id": 1, "sentence": "Mr. Darcy"},
+        {"id": 2, "sentence": "Mr. Bingley"},
+        {"id": 3, "sentence": "Mr. Wickham"},
+        {"id": 4, "sentence": "Mr. Rochester"}
+      ],
+      "rightAnswer": 1,
+      "category": "Literature"
+    },
+    {
+      "id": 58,
+      "sentence": "Who wrote the epic poem 'The Iliad'?",
+      "answers": [
+        {"id": 0, "sentence": "Homer"},
+        {"id": 1, "sentence": "Virgil"},
+        {"id": 2, "sentence": "Ovid"},
+        {"id": 3, "sentence": "Sophocles"},
+        {"id": 4, "sentence": "Aristotle"}
+      ],
+      "rightAnswer": 0,
+      "category": "Literature"
+    },
+    {
+      "id": 59,
+      "sentence": "Which novel follows the story of a young governess who discovers dark secrets in her employer's house?",
+      "answers": [
+        {"id": 0, "sentence": "Dracula"},
+        {"id": 1, "sentence": "Frankenstein"},
+        {"id": 2, "sentence": "Wuthering Heights"},
+        {"id": 3, "sentence": "Jane Eyre"},
+        {"id": 4, "sentence": "TSense and Sensibility"}
+      ],
+      "rightAnswer": 3,
+      "category": "Literature"
+    },
+    {
+      "id": 60,
+      "sentence": "In 'The Great Gatsby', who is the narrator of the story?",
+      "answers": [
+        {"id": 0, "sentence": "Jay Gatsby"},
+        {"id": 1, "sentence": "Tom Buchanan"},
+        {"id": 2, "sentence": "Jordan Baker"},
+        {"id": 3, "sentence": "Nick Carraway"},
+        {"id": 4, "sentence": "Daisy Buchanan"}
+      ],
+      "rightAnswer": 3,
+      "category": "Literature"
+    },
+    {
+      "id": 61,
+      "sentence": "Which Shakespearean play features the character Macbeth?",
+      "answers": [
+        {"id": 0, "sentence": "Hamlet"},
+        {"id": 1, "sentence": "Othello"},
+        {"id": 2, "sentence": "King Lear"},
+        {"id": 3, "sentence": "Macbeth"},
+        {"id": 4, "sentence": "Julius Caesar"}
+      ],
+      "rightAnswer": 3,
+      "category": "Literature"
+    },
+    {
+      "id": 62,
+      "sentence": "In '1984', what is the totalitarian regime led by Big Brother called?",
+      "answers": [
+        {"id": 0, "sentence": "The Union"},
+        {"id": 1, "sentence": "The Federation"},
+        {"id": 2, "sentence": "The Party"},
+        {"id": 3, "sentence": "The Alliance"},
+        {"id": 4, "sentence": "The Corporation"}
+      ],
+      "rightAnswer": 2,
+      "category": "Literature"
+    },
+    {
+      "id": 63,
+      "sentence": "Who is the author of 'The Catcher in the Rye'?",
+      "answers": [
+        {"id": 0, "sentence": "J.D. Salinger"},
+        {"id": 1, "sentence": "Ernest Hemingway"},
+        {"id": 2, "sentence": "F. Scott Fitzgerald"},
+        {"id": 3, "sentence": "John Steinbeck"},
+        {"id": 4, "sentence": "Ray Bradbury"}
+      ],
+      "rightAnswer": 0,
+      "category": "Literature"
+    },
+    {
+      "id": 64,
+      "sentence": "In 'The Lord of the Rings', what is the name of the powerful ring that Frodo must destroy?",
+      "answers": [
+        {"id": 0, "sentence": "The Sorcerer's Stone"},
+        {"id": 1, "sentence": "The One Ring"},
+        {"id": 2, "sentence": "The Horcrux"},
+        {"id": 3, "sentence": "The Precious"},
+        {"id": 4, "sentence": "The Time-Turner"}
+      ],
+      "rightAnswer": 1,
+      "category": "Literature"
+    },
+    {
+      "id": 65,
+      "sentence": "Which novel follows the story of a young black girl named Celie in the Southern United States?",
+      "answers": [
+        {"id": 0, "sentence": "Beloved"},
+        {"id": 1, "sentence": "The Help"},
+        {"id": 2, "sentence": "Their Eyes Were Watching God"},
+        {"id": 3, "sentence": "The Color Purple"},
+        {"id": 4, "sentence": "Go Tell It on the Mountain"}
+      ],
+      "rightAnswer": 3,
+      "category": "Literature"
+    },
+    {
+      "id": 66,
+      "sentence": "Who wrote the tragedy play 'Hamlet'?",
+      "answers": [
+        {"id": 0, "sentence": "John Milton"},
+        {"id": 1, "sentence": "Geoffrey Chaucer"},
+        {"id": 2, "sentence": "William Shakespeare"},
+        {"id": 3, "sentence": "Samuel Beckett"},
+        {"id": 4, "sentence": "George Orwell"}
+      ],
+      "rightAnswer": 2,
+      "category": "Literature"
+    },
+    {
+      "id": 67,
+      "sentence": "In 'Frankenstein', who is the scientist who creates the monster?",
+      "answers": [
+        {"id": 0, "sentence": "Victor Frankenstein"},
+        {"id": 1, "sentence": "Robert Walton"},
+        {"id": 2, "sentence": "Henry Clerval"},
+        {"id": 3, "sentence": "Ishmael"},
+        {"id": 4, "sentence": "Captain Ahab"}
+      ],
+      "rightAnswer": 0,
+      "category": "Literature"
+    },
+    {
+      "id": 68,
+      "sentence": "Which American classic novel explores the lives of the Joad family during the Great Depression?",
+      "answers": [
+        {"id": 0, "sentence": "The Grapes of Wrath"},
+        {"id": 1, "sentence": "The Sound and the Fury"},
+        {"id": 2, "sentence": "East of Eden"},
+        {"id": 3, "sentence": "Of Mice and Men"},
+        {"id": 4, "sentence": "The Scarlet Letter"}
+      ],
+      "rightAnswer": 0,
+      "category": "Literature"
+    },
+    {
+      "id": 69,
+      "sentence": "Which play by Arthur Miller portrays the Salem witch trials?",
+      "answers": [
+        {"id": 0, "sentence": "Death of a Salesman"},
+        {"id": 1, "sentence": "The Crucible"},
+        {"id": 2, "sentence": "A Streetcar Named Desire"},
+        {"id": 3, "sentence": "Long Day's Journey Into Night"},
+        {"id": 4, "sentence": "Waiting for Godot"}
+      ],
+      "rightAnswer": 1,
+      "category": "Literature"
+    },
+    {
+      "id": 70,
+      "sentence": "Who is the author of the fantasy series 'A Song of Ice and Fire', which inspired the TV show 'Game of Thrones'?",
+      "answers": [
+        {"id": 0, "sentence": "J.R.R. Tolkien"},
+        {"id": 1, "sentence": "J.K. Rowling"},
+        {"id": 2, "sentence": "George R.R. Martin"},
+        {"id": 3, "sentence": "Philip Pullman"},
+        {"id": 4, "sentence": "C.S. Lewis"}
+      ],
+      "rightAnswer": 2,
+      "category": "Literature"
+    },
+    {
+      "id": 71,
+      "sentence": "Which river is the longest in the world?",
+      "answers": [
+        {"id": 0, "sentence": "Amazon River"},
+        {"id": 1, "sentence": "Nile River"},
+        {"id": 2, "sentence": "Yangtze River"},
+        {"id": 3, "sentence": "Congo River"},
+        {"id": 4, "sentence": "Mississippi River"}
+      ],
+      "rightAnswer": 1,
+      "category": "Geography"
+    },
+    {
+      "id": 72,
+      "sentence": "Which mountain is the highest in the world?",
+      "answers": [
+        {"id": 0, "sentence": "Mount Kilimanjaro"},
+        {"id": 1, "sentence": "Mount Everest"},
+        {"id": 2, "sentence": "Mount McKinley"},
+        {"id": 3, "sentence": "Mount Fuji"},
+        {"id": 4, "sentence": "Mount Aconcagua"}
+      ],
+      "rightAnswer": 1,
+      "category": "Geography"
+    },
+    {
+      "id": 73,
+      "sentence": "What is the capital city of Japan?",
+      "answers": [
+        {"id": 0, "sentence": "Beijing"},
+        {"id": 1, "sentence": "Tokyo"},
+        {"id": 2, "sentence": "Bangkok"},
+        {"id": 3, "sentence": "Seoul"},
+        {"id": 4, "sentence": "Moscow"}
+      ],
+      "rightAnswer": 1,
+      "category": "Geography"
+    },
+    {
+      "id": 74,
+      "sentence": "Which desert is the largest in the world?",
+      "answers": [
+        {"id": 0, "sentence": "Kalahari Desert"},
+        {"id": 1, "sentence": "Mojave Desert"},
+        {"id": 2, "sentence": "Sahara Desert"},
+        {"id": 3, "sentence": "Atacama Desert"},
+        {"id": 4, "sentence": "Arabian Desert"}
+      ],
+      "rightAnswer": 2,
+      "category": "Geography"
+    },
+    {
+      "id": 75,
+      "sentence": "Which continent is known as the 'Land Down Under'",
+      "answers": [
+        {"id": 0, "sentence": "Europe"},
+        {"id": 1, "sentence": "South America"},
+        {"id": 2, "sentence": "Australia"},
+        {"id": 3, "sentence": "Africa"},
+        {"id": 4, "sentence": "Antarctica"}
+      ],
+      "rightAnswer": 2,
+      "category": "Geography"
+    },
+    {
+      "id": 76,
+      "sentence": "What is the capital city of Brazil?",
+      "answers": [
+        {"id": 0, "sentence": "Buenos Aires"},
+        {"id": 1, "sentence": "Lima"},
+        {"id": 2, "sentence": "Brasília"},
+        {"id": 3, "sentence": "Bogotá"},
+        {"id": 4, "sentence": "Caracas"}
+      ],
+      "rightAnswer": 2,
+      "category": "Geography"
+    },
+    {
+      "id": 77,
+      "sentence": "Which country is known as the 'Land of the Rising Sun'?",
+      "answers": [
+        {"id": 0, "sentence": "China"},
+        {"id": 1, "sentence": "Japan"},
+        {"id": 2, "sentence": "South Korea"},
+        {"id": 3, "sentence": "Vietnam"},
+        {"id": 4, "sentence": "Thailand"}
+      ],
+      "rightAnswer": 1,
+      "category": "Geography"
+    },
+    {
+      "id": 78,
+      "sentence": "Which African country is famous for its pyramids?",
+      "answers": [
+        {"id": 0, "sentence": "Egypt"},
+        {"id": 1, "sentence": "Nigeria"},
+        {"id": 2, "sentence": "Kenya"},
+        {"id": 3, "sentence": "Tanzania"},
+        {"id": 4, "sentence": "Morocco"}
+      ],
+      "rightAnswer": 0,
+      "category": "Geography"
+    },
+    {
+      "id": 79,
+      "sentence": "What is the largest lake in Africa?",
+      "answers": [
+        {"id": 0, "sentence": "Lake Victoria"},
+        {"id": 1, "sentence": "Lake Tanganyika"},
+        {"id": 2, "sentence": "Lake Malawi"},
+        {"id": 3, "sentence": "Lake Chad"},
+        {"id": 4, "sentence": "Lake Nasser"}
+      ],
+      "rightAnswer": 0,
+      "category": "Geography"
+    },
+    {
+      "id": 80,
+      "sentence": "Which city is located at the Golden Gate strait, leading to San Francisco Bay?",
+      "answers": [
+        {"id": 0, "sentence": "Sydney"},
+        {"id": 1, "sentence": "Los Angeles"},
+        {"id": 2, "sentence": "New York City"},
+        {"id": 3, "sentence": "San Francisco"},
+        {"id": 4, "sentence": "Seattle"}
+      ],
+      "rightAnswer": 3,
+      "category": "Geography"
+    },
+    {
+      "id": 81,
+      "sentence": "Which country is known as the 'Land of the Midnight Sun'?",
+      "answers": [
+        {"id": 0, "sentence": "Norway"},
+        {"id": 1, "sentence": "Sweden"},
+        {"id": 2, "sentence": "Canada"},
+        {"id": 3, "sentence": "Russia"},
+        {"id": 4, "sentence": "Finland"}
+      ],
+      "rightAnswer": 0,
+      "category": "Geography"
+    },
+    {
+      "id": 82,
+      "sentence": "What is the world's largest coral reef system?",
+      "answers": [
+        {"id": 0, "sentence": "Great Barrier Reef"},
+        {"id": 1, "sentence": "Belize Barrier Reef"},
+        {"id": 2, "sentence": "Maldives Coral Reef"},
+        {"id": 3, "sentence": "Red Sea Coral Reef"},
+        {"id": 4, "sentence": "Andros Barrier Reef"}
+      ],
+      "rightAnswer": 0,
+      "category": "Geography"
+    },
+    {
+      "id": 83,
+      "sentence": "Which strait separates Africa from Europe?",
+      "answers": [
+        {"id": 0, "sentence": "Strait of Gibraltar"},
+        {"id": 1, "sentence": "Strait of Hormuz"},
+        {"id": 2, "sentence": "Bering Strait"},
+        {"id": 3, "sentence": "Strait of Malacca"},
+        {"id": 4, "sentence": "Strait of Magellan"}
+      ],
+      "rightAnswer": 0,
+      "category": "Geography"
+    },
+    {
+      "id": 84,
+      "sentence": "What is the capital city of Russia?",
+      "answers": [
+        {"id": 0, "sentence": "Saint Petersburg"},
+        {"id": 1, "sentence": "Kiev"},
+        {"id": 2, "sentence": "Minsk"},
+        {"id": 3, "sentence": "Warsaw"},
+        {"id": 4, "sentence": "Moscow"}
+      ],
+      "rightAnswer": 4,
+      "category": "Geography"
+    },
+    {
+      "id": 85,
+      "sentence": "Which island is known as 'The Pearl of the Indian Ocean'?",
+      "answers": [
+        {"id": 0, "sentence": "Madagascar"},
+        {"id": 1, "sentence": "Maldives"},
+        {"id": 2, "sentence": "Sri Lanka"},
+        {"id": 3, "sentence": "Mauritius"},
+        {"id": 4, "sentence": "Bali"}
+      ],
+      "rightAnswer": 2,
+      "category": "Geography"
+    },
+    {
+      "id": 86,
+      "sentence": "What is the largest country by land area?",
+      "answers": [
+        {"id": 0, "sentence": "United States"},
+        {"id": 1, "sentence": "China"},
+        {"id": 2, "sentence": "Brazil"},
+        {"id": 3, "sentence": "Australia"},
+        {"id": 4, "sentence": "Russia"}
+      ],
+      "rightAnswer": 1,
+      "category": "Geography"
+    },
+    {
+      "id": 87,
+      "sentence": "Which river is the longest in Europe?",
+      "answers": [
+        {"id": 0, "sentence": "Danube River"},
+        {"id": 1, "sentence": "Volga River"},
+        {"id": 2, "sentence": "Seine River"},
+        {"id": 3, "sentence": "Thames River"},
+        {"id": 4, "sentence": "Rhine River"}
+      ],
+      "rightAnswer": 1,
+      "category": "Geography"
+    },
+    {
+      "id": 88,
+      "sentence": "What is the capital city of Australia?",
+      "answers": [
+        {"id": 0, "sentence": "Sydney"},
+        {"id": 1, "sentence": "Melbourne"},
+        {"id": 2, "sentence": "Brisbane"},
+        {"id": 3, "sentence": "Perth"},
+        {"id": 4, "sentence": "Canberra"}
+      ],
+      "rightAnswer": 4,
+      "category": "Geography"
+    },
+    {
+      "id": 89,
+      "sentence": "Which river runs through the Grand Canyon in the United States?",
+      "answers": [
+        {"id": 0, "sentence": "Columbia River"},
+        {"id": 1, "sentence": "Colorado River"},
+        {"id": 2, "sentence": "Missouri River"},
+        {"id": 3, "sentence": "Mississippi River"},
+        {"id": 4, "sentence": "Rio Grande"}
+      ],
+      "rightAnswer": 1,
+      "category": "Geography"
+    },
+    {
+      "id": 90,
+      "sentence": "What is the largest island in the world?",
+      "answers": [
+        {"id": 0, "sentence": "Madagascar"},
+        {"id": 1, "sentence": "Borneo"},
+        {"id": 2, "sentence": "Greenland"},
+        {"id": 3, "sentence": "New Guinea"},
+        {"id": 4, "sentence": "Baffin Island"}
+      ],
+      "rightAnswer": 3,
+      "category": "Geography"
+    },
+    {
+      "id": 91,
+      "sentence": "What is the chemical symbol for water?",
+      "answers": [
+        {"id": 0, "sentence": "Wo"},
+        {"id": 1, "sentence": "Wa"},
+        {"id": 2, "sentence": "H2O"},
+        {"id": 3, "sentence": "O2"},
+        {"id": 4, "sentence": "W"}
+      ],
+      "rightAnswer": 2,
+      "category": "Science"
+    },
+    {
+      "id": 92,
+      "sentence": "Which planet is known as the 'Red Planet'?",
+      "answers": [
+        {"id": 0, "sentence": "Venus"},
+        {"id": 1, "sentence": "Mars"},
+        {"id": 2, "sentence": "Jupiter"},
+        {"id": 3, "sentence": "Saturn"},
+        {"id": 4, "sentence": "Neptune"}
+      ],
+      "rightAnswer": 1,
+      "category": "Science"
+    },
+    {
+      "id": 93,
+      "sentence": "What is the smallest unit of matter?",
+      "answers": [
+        {"id": 0, "sentence": "Atom"},
+        {"id": 1, "sentence": "Molecule"},
+        {"id": 2, "sentence": "Cell"},
+        {"id": 3, "sentence": "Electron"},
+        {"id": 4, "sentence": "Nucleus"}
+      ],
+      "rightAnswer": 0,
+      "category": "Science"
+    },
+    {
+      "id": 94,
+      "sentence": "Which force keeps planets in orbit around the Sun?",
+      "answers": [
+        {"id": 0, "sentence": "Gravity"},
+        {"id": 1, "sentence": "Friction"},
+        {"id": 2, "sentence": "Magnetism"},
+        {"id": 3, "sentence": "Centrifugal force"},
+        {"id": 4, "sentence": "Nuclear force"}
+      ],
+      "rightAnswer": 0,
+      "category": "Science"
+    },
+    {
+      "id": 95,
+      "sentence": "Which scientist is credited with the laws of motion and gravity?",
+      "answers": [
+        {"id": 0, "sentence": "Albert Einstein"},
+        {"id": 1, "sentence": "Isaac Newton"},
+        {"id": 2, "sentence": "Charles Darwin"},
+        {"id": 3, "sentence": "Galileo Galilei"},
+        {"id": 4, "sentence": "Marie Curie"}
+      ],
+      "rightAnswer": 1,
+      "category": "Science"
+    },
+    {
+      "id": 96,
+      "sentence": "What is the chemical symbol for gold?",
+      "answers": [
+        {"id": 0, "sentence": "Au"},
+        {"id": 1, "sentence": "Go"},
+        {"id": 2, "sentence": "Gl"},
+        {"id": 3, "sentence": "Gd"},
+        {"id": 4, "sentence": "G"}
+      ],
+      "rightAnswer": 0,
+      "category": "Science"
+    },
+    {
+      "id": 97,
+      "sentence": "Which type of energy is stored in the nucleus of an atom?",
+      "answers": [
+        {"id": 0, "sentence": "Kinetic energy"},
+        {"id": 1, "sentence": "Thermal energy"},
+        {"id": 2, "sentence": "Chemical energy"},
+        {"id": 3, "sentence": "Nuclear energy"},
+        {"id": 4, "sentence": "Electrical energy"}
+      ],
+      "rightAnswer": 3,
+      "category": "Science"
+    },
+    {
+      "id": 98,
+      "sentence": "What is the process by which plants release water vapor into the air?",
+      "answers": [
+        {"id": 0, "sentence": "Transpiration"},
+        {"id": 1, "sentence": "Evaporation"},
+        {"id": 2, "sentence": "Condensation"},
+        {"id": 3, "sentence": "Precipitation"},
+        {"id": 4, "sentence": "Sublimation"}
+      ],
+      "rightAnswer": 0,
+      "category": "Science"
+    },
+    {
+      "id": 99,
+      "sentence": "What is the chemical symbol for oxygen?",
+      "answers": [
+        {"id": 0, "sentence": "O2"},
+        {"id": 1, "sentence": "O"},
+        {"id": 2, "sentence": "Ox"},
+        {"id": 3, "sentence": "Ox2"},
+        {"id": 4, "sentence": "Oi"}
+      ],
+      "rightAnswer": 1,
+      "category": "Science"
+    },
+    {
+      "id": 100,
+      "sentence": "Which component of the blood is responsible for oxygen transport?",
+      "answers": [
+        {"id": 0, "sentence": "White blood cells"},
+        {"id": 1, "sentence": "Plasma"},
+        {"id": 2, "sentence": "Red blood cells"},
+        {"id": 3, "sentence": "Platelets"},
+        {"id": 4, "sentence": "Hemoglobin"}
+      ],
+      "rightAnswer": 2,
+      "category": "Science"
+    },
+    {
+      "id": 101,
+      "sentence": "What is the study of fossils called?",
+      "answers": [
+        {"id": 0, "sentence": "Archaeology"},
+        {"id": 1, "sentence": "Anthropology"},
+        {"id": 2, "sentence": "Paleontology"},
+        {"id": 3, "sentence": "Geology"},
+        {"id": 4, "sentence": "Zoology"}
+      ],
+      "rightAnswer": 2,
+      "category": "Science"
+    },
+    {
+      "id": 102,
+      "sentence": "Which gas do plants absorb from the atmosphere during photosynthesis?",
+      "answers": [
+        {"id": 0, "sentence": "Oxygen"},
+        {"id": 1, "sentence": "Carbon monoxide"},
+        {"id": 2, "sentence": "Carbon dioxide"},
+        {"id": 3, "sentence": "Nitrogen"},
+        {"id": 4, "sentence": "Hydrogen"}
+      ],
+      "rightAnswer": 2,
+      "category": "Science"
+    },
+    {
+      "id": 103,
+      "sentence": "Which subatomic particle has a positive charge?",
+      "answers": [
+        {"id": 0, "sentence": "Proton"},
+        {"id": 1, "sentence": "Electron"},
+        {"id": 2, "sentence": "Neutron"},
+        {"id": 3, "sentence": "Photon"},
+        {"id": 4, "sentence": "Positron"}
+      ],
+      "rightAnswer": 0,
+      "category": "Science"
+    },
+    {
+      "id": 104,
+      "sentence": "What is the unit of measurement for electric current?",
+      "answers": [
+        {"id": 0, "sentence": "Watt"},
+        {"id": 1, "sentence": "Volt"},
+        {"id": 2, "sentence": "Ohm"},
+        {"id": 3, "sentence": "Ampere"},
+        {"id": 4, "sentence": "Hertz"}
+      ],
+      "rightAnswer": 3,
+      "category": "Science"
+    },
+    {
+      "id": 105,
+      "sentence": "What is the process by which a liquid turns into a gas at its surface?",
+      "answers": [
+        {"id": 0, "sentence": "Evaporation"},
+        {"id": 1, "sentence": "Condensation"},
+        {"id": 2, "sentence": "Sublimation"},
+        {"id": 3, "sentence": "Melting"},
+        {"id": 4, "sentence": "Vaporization"}
+      ],
+      "rightAnswer": 0,
+      "category": "Science"
+    },
+    {
+      "id": 106,
+      "sentence": "Which scientist proposed the theory of general relativity?",
+      "answers": [
+        {"id": 0, "sentence": "Albert Einstein"},
+        {"id": 1, "sentence": "Isaac Newton"},
+        {"id": 2, "sentence": "Charles Darwin"},
+        {"id": 3, "sentence": "Galileo Galilei"},
+        {"id": 4, "sentence": "Nikola Tesla"}
+      ],
+      "rightAnswer": 0,
+      "category": "Science"
+    },
+    {
+      "id": 107,
+      "sentence": "What causes the tides on Earth?",
+      "answers": [
+        {"id": 0, "sentence": "Solar Flares"},
+        {"id": 1, "sentence": "Wind"},
+        {"id": 2, "sentence": "Gravitational Pull of the Moon"},
+        {"id": 3, "sentence": "Volcanic Activity"},
+        {"id": 4, "sentence": "Magnetic Fields"}
+      ],
+      "rightAnswer": 2,
+      "category": "Science"
+    },
+    {
+      "id": 108,
+      "sentence": "What type of energy is stored in a stretched rubber band?",
+      "answers": [
+        {"id": 0, "sentence": "Nuclear Energy"},
+        {"id": 1, "sentence": "Kinetic Energy"},
+        {"id": 2, "sentence": "Potential Energy"},
+        {"id": 3, "sentence": "Solar Energy"},
+        {"id": 4, "sentence": "Electrical Energy"}
+      ],
+      "rightAnswer": 1,
+      "category": "Science"
+    },
+    {
+      "id": 109,
+      "sentence": "What causes the phenomenon known as the Northern Lights (Aurora Borealis)?",
+      "answers": [
+        {"id": 0, "sentence": "Sunlight reflecting off the Moon"},
+        {"id": 1, "sentence": "Electricity in the atmosphere"},
+        {"id": 2, "sentence": "Forest fires"},
+        {"id": 3, "sentence": "Friction between tectonic plates"},
+        {"id": 4, "sentence": "Solar particles interacting with Earth's atmosphere"}
+      ],
+      "rightAnswer": 4,
+      "category": "Science"
+    },
+    {
+      "id": 110,
+      "sentence": "Which element is essential for human bone and tooth formation?",
+      "answers": [
+        {"id": 0, "sentence": "Calcium"},
+        {"id": 1, "sentence": "Iron"},
+        {"id": 2, "sentence": "Sodium"},
+        {"id": 3, "sentence": "Potassium"},
+        {"id": 4, "sentence": "Magnesium"}
+      ],
+      "rightAnswer": 0,
+      "category": "Science"
+    },
+    {
+      "id": 111,
+      "sentence": "What is the process by which a caterpillar develops into a butterfly?",
+      "answers": [
+        {"id": 0, "sentence": "Metamorphosis"},
+        {"id": 1, "sentence": "Hibernation"},
+        {"id": 2, "sentence": "Germination"},
+        {"id": 3, "sentence": "Respiration"},
+        {"id": 4, "sentence": "Photosynthesis"}
+      ],
+      "rightAnswer": 0,
+      "category": "Science"
+    },
+    {
+      "id": 112,
+      "sentence": "What is the speed of light in a vacuum?",
+      "answers": [
+        {"id": 0, "sentence": "300,000 kilometers per hour"},
+        {"id": 1, "sentence": "300,000 meters per second"},
+        {"id": 2, "sentence": "3,000 kilometers per second"},
+        {"id": 3, "sentence": "3,000 meters per hour"},
+        {"id": 4, "sentence": "300 kilometers per second"}
+      ],
+      "rightAnswer": 1,
+      "category": "Science"
+    }
+  ]
+}
