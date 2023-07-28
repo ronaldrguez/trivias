@@ -18,7 +18,7 @@ class RankingList extends StatelessWidget {
           child: ListTile(
             leading: Text('Pos', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.indigoAccent),),
             title: Text('Users', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.indigoAccent),),
-            trailing: Text('Points', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.indigoAccent),),
+            trailing: Text('Duration', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.indigoAccent),),
           ),
         ),
         ListView.builder(
@@ -42,10 +42,13 @@ class RankingListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var min = trivia.duration ~/ 60;
+    var sec = trivia.duration - (min * 60);
     return ListTile(
-    leading: Text('$pos'),
-    title: Text(userName),
-    trailing: Text(trivia.total.toStringAsFixed(2)),
+      leading: Text('$pos'),
+      title: Text(userName),
+      subtitle: Text('${trivia.rightAnswers} of ${trivia.questions.length}'),
+      trailing: Text('$min : $sec'),
     );
   }
 }
