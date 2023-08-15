@@ -59,12 +59,12 @@ class _TriviaFormWidgetState extends State<TriviaFormWidget> {
             children: [
               if(widget.index > 0)
                 OutlinedButton(onPressed: (){
-                  context.read<TriviaBloc>().add(BackQuestionEvent(questionId: _question.id));
+                  context.read<TriviaBloc>().add(BackQuestionEvent(questionId: _question.id, trivia: widget.trivia));
                 }, child: const Text('Back')),
               if(widget.index < widget.trivia.questions.length - 1)
                 ElevatedButton(onPressed: (){
                   if(_response != null) {
-                    context.read<TriviaBloc>().add(NextQuestionEvent(questionId: _question.id, response: _response!));
+                    context.read<TriviaBloc>().add(NextQuestionEvent(questionId: _question.id, response: _response!, trivia: widget.trivia));
                   } else {
                     DialogService.showInfo(context, title: 'Alert', content: const Text('You must choose one option'));
                   }
@@ -72,7 +72,7 @@ class _TriviaFormWidgetState extends State<TriviaFormWidget> {
               if(widget.index == widget.trivia.questions.length - 1)
                 ElevatedButton(onPressed: () {
                   if(_response != null) {
-                    context.read<TriviaBloc>().add(FinishTriviaEvent(response: _response!));
+                    context.read<TriviaBloc>().add(FinishTriviaEvent(response: _response!, trivia: widget.trivia));
                   } else {
                     DialogService.showInfo(context, title: 'Alert', content: const Text('You must choose one option'));
                   }

@@ -6,10 +6,9 @@ import 'package:trivia/repository/trivia_repository.dart';
 part 'package:trivia/bloc/trivia/trivia_event.dart';
 part 'package:trivia/bloc/trivia/trivia_state.dart';
 
-class TriviaBloc extends Bloc<TriviaEvent,TriviaState> {
+class TriviaBloc extends Bloc<TriviaEvent, TriviaState> {
   final TriviaRepository _repository;
-  TriviaBloc(this._repository) : super(UnTriviaState()){
-
+  TriviaBloc(this._repository) : super(UnTriviaState()) {
     on<LoadingTriviaEvent>((event, emit) async {
       emit(LoadTriviaState());
       final trivia = _repository.getTrivia(event.category);
@@ -17,37 +16,45 @@ class TriviaBloc extends Bloc<TriviaEvent,TriviaState> {
     });
 
     on<NextQuestionEvent>((event, emit) async {
-    final auxState = (state as InTriviaState);
-    final trivia = auxState.trivia;
-    Map<int, int> answers = <int,int>{};
-    if(trivia.answers.keys.isNotEmpty) {
-      trivia.answers.forEach((key, value) {
-        answers[key] = value;
-      });
-    }
-    answers[event.questionId] = event.response;
-    emit(InTriviaState(trivia: trivia.copyWith(answers: answers), index: auxState.index + 1, start: auxState.start),);
-    });
-
-    on<BackQuestionEvent>((event, emit) async {
-      final auxState = (state as InTriviaState);
-      emit(InTriviaState(trivia: auxState.trivia, index: auxState.index - 1, start: auxState.start));
-    });
-
-    on<FinishTriviaEvent>((event, emit) async {
-      final auxState = (state as InTriviaState);
-      var trivia = auxState.trivia;
-      var finish = DateTime.now();
-      Map<int, int> answers = <int,int>{};
-      if(trivia.answers.keys.isNotEmpty) {
-        trivia.answers.forEach((key, value) {
+      Map<int, int> answers = <int, int>{};
+      if (event.trivia.answers.keys.isNotEmpty) {
+        event.trivia.answers.forEach((key, value) {
           answers[key] = value;
         });
       }
-      answers[trivia.questions.last.id] = event.response;
-      trivia = trivia.copyWith(answers: answers, duration: finish.difference(auxState.start).inSeconds);
-      _repository.saveTrivia(trivia);
-      emit(CompleteTriviaState(trivia));
-      });
+      answers[event.questionId] = event.response;
+      if (state is InTriviaState) {
+        final auxState = (state as InTriviaState);
+        emit(auxState.copyWith(
+            trivia: event.trivia.copyWith(answers: answers),
+            isIncrement: true));
+      }
+    });
+
+    on<BackQuestionEvent>((event, emit) async {
+      if (state is InTriviaState) {
+        final auxState = (state as InTriviaState);
+        emit(auxState.copyWith(trivia: event.trivia, isIncrement: false));
+      }
+    });
+
+    on<FinishTriviaEvent>((event, emit) async {
+      if (state is InTriviaState) {
+        final auxState = (state as InTriviaState);
+        var finish = DateTime.now();
+        Map<int, int> answers = <int, int>{};
+        if (event.trivia.answers.keys.isNotEmpty) {
+          event.trivia.answers.forEach((key, value) {
+            answers[key] = value;
+          });
+        }
+        answers[event.trivia.questions.last.id] = event.response;
+        var trivia = event.trivia.copyWith(
+            answers: answers,
+            duration: finish.difference(auxState.start).inSeconds);
+        _repository.saveTrivia(trivia);
+        emit(CompleteTriviaState(trivia));
+      }
+    });
   }
 }

@@ -11,19 +11,22 @@ class LoadingTriviaEvent extends TriviaEvent {
 class NextQuestionEvent extends TriviaEvent {
   final int response;
   final int questionId;
+  final Trivia trivia;
 
-  NextQuestionEvent({required this.response, required this.questionId});
+  NextQuestionEvent({required this.response, required this.questionId, required this.trivia});
 }
 
 class BackQuestionEvent extends TriviaEvent {
   final int questionId;
+  final Trivia trivia;
 
-  BackQuestionEvent({required this.questionId});
+  BackQuestionEvent({required this.questionId, required this.trivia});
 
 }
 
 class FinishTriviaEvent extends TriviaEvent {
   final int response;
+  final Trivia trivia;
 
-  FinishTriviaEvent({required this.response});
+  FinishTriviaEvent({required this.response, required this.trivia });
 }
