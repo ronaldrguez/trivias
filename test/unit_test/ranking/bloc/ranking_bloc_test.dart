@@ -22,7 +22,6 @@ void main() {
   late User foundUser;
 
   setUpAll(() {
-    repo = MockRankingRepository();
     Map<int, int> answers = <int, int>{};
     for (int i = 0; i < 20; i++) {
       answers[i] = 2;
@@ -56,7 +55,10 @@ void main() {
   });
 
   group('Testing RankingBloc', () {
-    setUp(() => sut = RankingBloc(repo));
+    setUp((){
+      repo = MockRankingRepository();
+      sut = RankingBloc(repo);
+    });
 
     test('Initial Test', () => expect(sut.state, UnTriviaState()));
 

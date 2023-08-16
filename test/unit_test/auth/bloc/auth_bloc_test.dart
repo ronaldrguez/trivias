@@ -13,13 +13,12 @@ void main () {
   late UserBloc sut;
   late AuthRepository repo;
 
-  setUpAll(() {
-    repo = MockAuthRepository();
-  });
-
   group('User Bloc Test', () {
 
-    setUp(() => sut = UserBloc(repo));
+    setUp((){
+      repo = MockAuthRepository();
+      sut = UserBloc(repo);
+    });
     
     test('Initial Test', () => expect(sut.state, LoadUserState()));
 
