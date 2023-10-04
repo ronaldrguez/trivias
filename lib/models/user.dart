@@ -1,7 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
-import 'package:trivia/models/trivia.dart';
-import 'package:trivia/utils/helpers/hive_type_helper.dart';
 import 'package:uuid/uuid.dart';
 
 part 'user.freezed.dart';
@@ -10,13 +7,11 @@ part 'user.g.dart';
 @Freezed(toJson: true)
 class User with _$User {
 
-  @HiveType(typeId: HiveTypeHelper.userType, adapterName: 'UserAdapter')
   const factory User({
-    @JsonKey(name: 'id') @HiveField(0) required String id,
-    @JsonKey(name: 'userName') @HiveField(1) required String userName,
-    @JsonKey(name: 'password') @HiveField(2) required String password,
-    @JsonKey(name: 'name') @HiveField(3) required String name,
-    @JsonKey(name: 'results') @HiveField(4) required List<Trivia> results
+    @JsonKey(name: 'id') required String id,
+    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'email') required String email,
+    @JsonKey(name: 'password') String? password,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

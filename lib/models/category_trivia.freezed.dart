@@ -21,10 +21,8 @@ CategoryTrivia _$CategoryTriviaFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CategoryTrivia {
   @JsonKey(name: 'id')
-  @HiveField(0)
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'category')
-  @HiveField(1)
   String get sentence => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,8 +38,8 @@ abstract class $CategoryTriviaCopyWith<$Res> {
       _$CategoryTriviaCopyWithImpl<$Res, CategoryTrivia>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') @HiveField(0) int id,
-      @JsonKey(name: 'category') @HiveField(1) String sentence});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'category') String sentence});
 }
 
 /// @nodoc
@@ -64,7 +62,7 @@ class _$CategoryTriviaCopyWithImpl<$Res, $Val extends CategoryTrivia>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       sentence: null == sentence
           ? _value.sentence
           : sentence // ignore: cast_nullable_to_non_nullable
@@ -82,8 +80,8 @@ abstract class _$$_CategoryTriviaCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') @HiveField(0) int id,
-      @JsonKey(name: 'category') @HiveField(1) String sentence});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'category') String sentence});
 }
 
 /// @nodoc
@@ -104,7 +102,7 @@ class __$$_CategoryTriviaCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       sentence: null == sentence
           ? _value.sentence
           : sentence // ignore: cast_nullable_to_non_nullable
@@ -115,23 +113,19 @@ class __$$_CategoryTriviaCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(
-    typeId: HiveTypeHelper.categoryType, adapterName: 'CategoryTriviaAdapter')
 class _$_CategoryTrivia implements _CategoryTrivia {
   const _$_CategoryTrivia(
-      {@JsonKey(name: 'id') @HiveField(0) required this.id,
-      @JsonKey(name: 'category') @HiveField(1) required this.sentence});
+      {@JsonKey(name: 'id') required this.id,
+      @JsonKey(name: 'category') required this.sentence});
 
   factory _$_CategoryTrivia.fromJson(Map<String, dynamic> json) =>
       _$$_CategoryTriviaFromJson(json);
 
   @override
   @JsonKey(name: 'id')
-  @HiveField(0)
-  final int id;
+  final String id;
   @override
   @JsonKey(name: 'category')
-  @HiveField(1)
   final String sentence;
 
   @override
@@ -169,23 +163,18 @@ class _$_CategoryTrivia implements _CategoryTrivia {
 
 abstract class _CategoryTrivia implements CategoryTrivia {
   const factory _CategoryTrivia(
-      {@JsonKey(name: 'id')
-      @HiveField(0)
-          required final int id,
-      @JsonKey(name: 'category')
-      @HiveField(1)
-          required final String sentence}) = _$_CategoryTrivia;
+          {@JsonKey(name: 'id') required final String id,
+          @JsonKey(name: 'category') required final String sentence}) =
+      _$_CategoryTrivia;
 
   factory _CategoryTrivia.fromJson(Map<String, dynamic> json) =
       _$_CategoryTrivia.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  @HiveField(0)
-  int get id;
+  String get id;
   @override
   @JsonKey(name: 'category')
-  @HiveField(1)
   String get sentence;
   @override
   @JsonKey(ignore: true)

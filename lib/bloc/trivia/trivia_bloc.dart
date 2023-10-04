@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:trivia/models/category_trivia.dart';
 import 'package:trivia/models/trivia.dart';
 import 'package:trivia/repository/trivia_repository.dart';
 
@@ -11,12 +12,12 @@ class TriviaBloc extends Bloc<TriviaEvent, TriviaState> {
   TriviaBloc(this._repository) : super(UnTriviaState()) {
     on<LoadingTriviaEvent>((event, emit) async {
       emit(LoadTriviaState());
-      final trivia = _repository.getTrivia(event.category);
+      final trivia = await _repository.getTrivia(event.category);
       emit(InTriviaState(trivia: trivia, start: DateTime.now()));
     });
 
     on<NextQuestionEvent>((event, emit) async {
-      Map<int, int> answers = <int, int>{};
+      var answers = <String, String>{};
       if (event.trivia.answers.keys.isNotEmpty) {
         event.trivia.answers.forEach((key, value) {
           answers[key] = value;
@@ -42,7 +43,7 @@ class TriviaBloc extends Bloc<TriviaEvent, TriviaState> {
       if (state is InTriviaState) {
         final auxState = (state as InTriviaState);
         var finish = DateTime.now();
-        Map<int, int> answers = <int, int>{};
+        var answers = <String, String>{};
         if (event.trivia.answers.keys.isNotEmpty) {
           event.trivia.answers.forEach((key, value) {
             answers[key] = value;

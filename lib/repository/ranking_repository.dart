@@ -1,16 +1,16 @@
 import 'package:trivia/models/trivia.dart';
 import 'package:trivia/models/user.dart';
-import 'package:trivia/provider/local/ranking_local_provider.dart';
+import 'package:trivia/provider/online/ranking_online_provider.dart';
 import 'package:trivia/provider/ranking_provider.dart';
 
 class RankingRepository {
   final RankingProvider provider;
 
-  const RankingRepository({this.provider = const RankingLocalProvider()});
+  const RankingRepository({this.provider = const RankingOnlineProvider()});
 
-  List<Trivia> getAllTrivias() => provider.getAllTrivias();
+  Future<List<Trivia>> getAllTrivias() => provider.getAllTrivias();
 
   Map<String, List<Trivia>> getAllTriviasByCategory() => provider.getAllTriviasByCategory();
 
-  User findUser(String userId) => provider.findUser(userId);
+  Future<List<User>> getAllUsers() => provider.getAllUsers();
 }

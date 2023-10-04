@@ -21,20 +21,13 @@ User _$UserFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$User {
   @JsonKey(name: 'id')
-  @HiveField(0)
   String get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'userName')
-  @HiveField(1)
-  String get userName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'password')
-  @HiveField(2)
-  String get password => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
-  @HiveField(3)
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'results')
-  @HiveField(4)
-  List<Trivia> get results => throw _privateConstructorUsedError;
+  @JsonKey(name: 'email')
+  String get email => throw _privateConstructorUsedError;
+  @JsonKey(name: 'password')
+  String? get password => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47,11 +40,10 @@ abstract class $UserCopyWith<$Res> {
       _$UserCopyWithImpl<$Res, User>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') @HiveField(0) String id,
-      @JsonKey(name: 'userName') @HiveField(1) String userName,
-      @JsonKey(name: 'password') @HiveField(2) String password,
-      @JsonKey(name: 'name') @HiveField(3) String name,
-      @JsonKey(name: 'results') @HiveField(4) List<Trivia> results});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'email') String email,
+      @JsonKey(name: 'password') String? password});
 }
 
 /// @nodoc
@@ -68,32 +60,27 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
   @override
   $Res call({
     Object? id = null,
-    Object? userName = null,
-    Object? password = null,
     Object? name = null,
-    Object? results = null,
+    Object? email = null,
+    Object? password = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      userName: null == userName
-          ? _value.userName
-          : userName // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      results: null == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Trivia>,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: freezed == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -105,11 +92,10 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') @HiveField(0) String id,
-      @JsonKey(name: 'userName') @HiveField(1) String userName,
-      @JsonKey(name: 'password') @HiveField(2) String password,
-      @JsonKey(name: 'name') @HiveField(3) String name,
-      @JsonKey(name: 'results') @HiveField(4) List<Trivia> results});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'email') String email,
+      @JsonKey(name: 'password') String? password});
 }
 
 /// @nodoc
@@ -122,89 +108,58 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
   @override
   $Res call({
     Object? id = null,
-    Object? userName = null,
-    Object? password = null,
     Object? name = null,
-    Object? results = null,
+    Object? email = null,
+    Object? password = freezed,
   }) {
     return _then(_$_User(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      userName: null == userName
-          ? _value.userName
-          : userName // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      results: null == results
-          ? _value._results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Trivia>,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: freezed == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: HiveTypeHelper.userType, adapterName: 'UserAdapter')
 class _$_User implements _User {
   const _$_User(
-      {@JsonKey(name: 'id')
-      @HiveField(0)
-          required this.id,
-      @JsonKey(name: 'userName')
-      @HiveField(1)
-          required this.userName,
-      @JsonKey(name: 'password')
-      @HiveField(2)
-          required this.password,
-      @JsonKey(name: 'name')
-      @HiveField(3)
-          required this.name,
-      @JsonKey(name: 'results')
-      @HiveField(4)
-          required final List<Trivia> results})
-      : _results = results;
+      {@JsonKey(name: 'id') required this.id,
+      @JsonKey(name: 'name') required this.name,
+      @JsonKey(name: 'email') required this.email,
+      @JsonKey(name: 'password') this.password});
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
   @override
   @JsonKey(name: 'id')
-  @HiveField(0)
   final String id;
   @override
-  @JsonKey(name: 'userName')
-  @HiveField(1)
-  final String userName;
+  @JsonKey(name: 'name')
+  final String name;
+  @override
+  @JsonKey(name: 'email')
+  final String email;
   @override
   @JsonKey(name: 'password')
-  @HiveField(2)
-  final String password;
-  @override
-  @JsonKey(name: 'name')
-  @HiveField(3)
-  final String name;
-  final List<Trivia> _results;
-  @override
-  @JsonKey(name: 'results')
-  @HiveField(4)
-  List<Trivia> get results {
-    if (_results is EqualUnmodifiableListView) return _results;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_results);
-  }
+  final String? password;
 
   @override
   String toString() {
-    return 'User(id: $id, userName: $userName, password: $password, name: $name, results: $results)';
+    return 'User(id: $id, name: $name, email: $email, password: $password)';
   }
 
   @override
@@ -213,18 +168,15 @@ class _$_User implements _User {
         (other.runtimeType == runtimeType &&
             other is _$_User &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.userName, userName) ||
-                other.userName == userName) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
             (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality().equals(other._results, _results));
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, userName, password, name,
-      const DeepCollectionEquality().hash(_results));
+  int get hashCode => Object.hash(runtimeType, id, name, email, password);
 
   @JsonKey(ignore: true)
   @override
@@ -242,44 +194,25 @@ class _$_User implements _User {
 
 abstract class _User implements User {
   const factory _User(
-      {@JsonKey(name: 'id')
-      @HiveField(0)
-          required final String id,
-      @JsonKey(name: 'userName')
-      @HiveField(1)
-          required final String userName,
-      @JsonKey(name: 'password')
-      @HiveField(2)
-          required final String password,
-      @JsonKey(name: 'name')
-      @HiveField(3)
-          required final String name,
-      @JsonKey(name: 'results')
-      @HiveField(4)
-          required final List<Trivia> results}) = _$_User;
+      {@JsonKey(name: 'id') required final String id,
+      @JsonKey(name: 'name') required final String name,
+      @JsonKey(name: 'email') required final String email,
+      @JsonKey(name: 'password') final String? password}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  @HiveField(0)
   String get id;
   @override
-  @JsonKey(name: 'userName')
-  @HiveField(1)
-  String get userName;
-  @override
-  @JsonKey(name: 'password')
-  @HiveField(2)
-  String get password;
-  @override
   @JsonKey(name: 'name')
-  @HiveField(3)
   String get name;
   @override
-  @JsonKey(name: 'results')
-  @HiveField(4)
-  List<Trivia> get results;
+  @JsonKey(name: 'email')
+  String get email;
+  @override
+  @JsonKey(name: 'password')
+  String? get password;
   @override
   @JsonKey(ignore: true)
   _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;

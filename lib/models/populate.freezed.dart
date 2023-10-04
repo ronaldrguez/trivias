@@ -114,9 +114,8 @@ class __$$_PopulateCopyWithImpl<$Res>
 class _$_Populate implements _Populate {
   const _$_Populate(
       {@JsonKey(name: 'categories')
-          required final List<CategoryTrivia> categories,
-      @JsonKey(name: 'questions')
-          required final List<Question> questions})
+      required final List<CategoryTrivia> categories,
+      @JsonKey(name: 'questions') required final List<Question> questions})
       : _categories = categories,
         _questions = questions;
 
@@ -181,9 +180,9 @@ class _$_Populate implements _Populate {
 abstract class _Populate implements Populate {
   const factory _Populate(
       {@JsonKey(name: 'categories')
-          required final List<CategoryTrivia> categories,
+      required final List<CategoryTrivia> categories,
       @JsonKey(name: 'questions')
-          required final List<Question> questions}) = _$_Populate;
+      required final List<Question> questions}) = _$_Populate;
 
   factory _Populate.fromJson(Map<String, dynamic> json) = _$_Populate.fromJson;
 

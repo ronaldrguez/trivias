@@ -22,3 +22,12 @@ class InAuthUserState extends UserState {
   @override
   List<Object?> get props => [user];
 }
+
+class InErrorState extends UserState {
+  final String message;
+
+  InErrorState(this.message);
+
+  @override
+  List<Object?> get props => [message];
+}

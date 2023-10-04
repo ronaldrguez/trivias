@@ -25,7 +25,7 @@ void main () {
     blocTest<UserBloc, UserState>('When an user is not previously login return UnAuthUserState',
         build: () => sut,
       act: (bloc) {
-      when(repo.keepLogin()).thenAnswer((_) async => null);
+      when(repo.keepLogin()).thenAnswer((_) => null);
         bloc.add(LoadingUserEvent());
       },
       expect: () => <UserState>[UnAuthUserState()]
@@ -34,21 +34,21 @@ void main () {
     blocTest<UserBloc, UserState>('When an user is previously login return InAuthUserState',
         build: () => sut,
         act: (bloc) {
-          const user = User( id: 'asdq1', name: 'Ronald', userName: 'rrreyes', password: '1234', results: []);
-          when(repo.keepLogin()).thenAnswer((_) async => user);
+          const user = User( id: 'asdq1', name: 'Ronald', email:'asdasd@gmail.com', password: '',);
+          when(repo.keepLogin()).thenAnswer((_) => user);
           bloc.add(LoadingUserEvent());
         },
-        expect: () => <UserState>[InAuthUserState(const User( id: 'asdq1', name: 'Ronald', userName: 'rrreyes', password: '1234', results: []))]
+        expect: () => <UserState>[InAuthUserState(const User( id: 'asdq1', name: 'Ronald', password: '', email:'asdasd@gmail.com',))]
     );
 
     blocTest<UserBloc, UserState>('If an user is login right it should return InAuthUserState',
         build: () => sut,
         act: (bloc) {
-          const user = User( id: 'asdq1', name: 'Ronald', userName: 'rrreyes', password: '1234', results: []);
+          const user = User( id: 'asdq1', name: 'Ronald', email:'asdasd@gmail.com', password: '',);
           when(repo.signIn('rrreyes', '1234')).thenAnswer((_) async => user);
           bloc.add(SignInEvent('rrreyes', '1234'));
         },
-        expect: () => <UserState>[InAuthUserState(const User( id: 'asdq1', name: 'Ronald', userName: 'rrreyes', password: '1234', results: []))]
+        expect: () => <UserState>[InAuthUserState(const User( id: 'asdq1', name: 'Ronald', email:'asdasd@gmail.com', password: '1234'))]
     );
 
     blocTest<UserBloc, UserState>('If an user is login wrong it should return UnAuthUserState',
@@ -72,7 +72,7 @@ void main () {
     blocTest<UserBloc, UserState>('If an user is signUp right it should return UnAuthUserState',
         build: () => sut,
         act: (bloc) {
-          const user = User( id: 'asdq1', name: 'Ronald', userName: 'rrreyes', password: '1234', results: []);
+          const user = User( id: 'asdq1', name: 'Ronald',password: '', email:'asdasd@gmail.com', );
           when(repo.signUp(user)).thenAnswer((_) async => true);
           bloc.add(SignUpEvent(user));
         },

@@ -4,9 +4,9 @@ import 'package:trivia/models/user.dart';
 abstract class RankingProvider {
   const RankingProvider();
 
-  List<Trivia> getAllTrivias();
+  Future<List<Trivia>> getAllTrivias();
 
   Map<String,List<Trivia>> getAllTriviasByCategory();
 
-  User findUser(String userId);
+  Future<List<User>> getAllUsers();
 }

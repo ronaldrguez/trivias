@@ -21,19 +21,14 @@ Question _$QuestionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Question {
   @JsonKey(name: 'id')
-  @HiveField(0)
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'sentence')
-  @HiveField(1)
   String get sentence => throw _privateConstructorUsedError;
   @JsonKey(name: 'answers')
-  @HiveField(2)
   List<Answer> get answers => throw _privateConstructorUsedError;
   @JsonKey(name: 'rightAnswer')
-  @HiveField(3)
-  int get rightAnswer => throw _privateConstructorUsedError;
+  String get rightAnswer => throw _privateConstructorUsedError;
   @JsonKey(name: 'category')
-  @HiveField(4)
   String get category => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -48,11 +43,11 @@ abstract class $QuestionCopyWith<$Res> {
       _$QuestionCopyWithImpl<$Res, Question>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') @HiveField(0) int id,
-      @JsonKey(name: 'sentence') @HiveField(1) String sentence,
-      @JsonKey(name: 'answers') @HiveField(2) List<Answer> answers,
-      @JsonKey(name: 'rightAnswer') @HiveField(3) int rightAnswer,
-      @JsonKey(name: 'category') @HiveField(4) String category});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'sentence') String sentence,
+      @JsonKey(name: 'answers') List<Answer> answers,
+      @JsonKey(name: 'rightAnswer') String rightAnswer,
+      @JsonKey(name: 'category') String category});
 }
 
 /// @nodoc
@@ -78,7 +73,7 @@ class _$QuestionCopyWithImpl<$Res, $Val extends Question>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       sentence: null == sentence
           ? _value.sentence
           : sentence // ignore: cast_nullable_to_non_nullable
@@ -90,7 +85,7 @@ class _$QuestionCopyWithImpl<$Res, $Val extends Question>
       rightAnswer: null == rightAnswer
           ? _value.rightAnswer
           : rightAnswer // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -107,11 +102,11 @@ abstract class _$$_QuestionCopyWith<$Res> implements $QuestionCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') @HiveField(0) int id,
-      @JsonKey(name: 'sentence') @HiveField(1) String sentence,
-      @JsonKey(name: 'answers') @HiveField(2) List<Answer> answers,
-      @JsonKey(name: 'rightAnswer') @HiveField(3) int rightAnswer,
-      @JsonKey(name: 'category') @HiveField(4) String category});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'sentence') String sentence,
+      @JsonKey(name: 'answers') List<Answer> answers,
+      @JsonKey(name: 'rightAnswer') String rightAnswer,
+      @JsonKey(name: 'category') String category});
 }
 
 /// @nodoc
@@ -135,7 +130,7 @@ class __$$_QuestionCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       sentence: null == sentence
           ? _value.sentence
           : sentence // ignore: cast_nullable_to_non_nullable
@@ -147,7 +142,7 @@ class __$$_QuestionCopyWithImpl<$Res>
       rightAnswer: null == rightAnswer
           ? _value.rightAnswer
           : rightAnswer // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -158,24 +153,13 @@ class __$$_QuestionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: HiveTypeHelper.questionType, adapterName: 'QuestionAdapter')
 class _$_Question implements _Question {
   const _$_Question(
-      {@JsonKey(name: 'id')
-      @HiveField(0)
-          required this.id,
-      @JsonKey(name: 'sentence')
-      @HiveField(1)
-          required this.sentence,
-      @JsonKey(name: 'answers')
-      @HiveField(2)
-          required final List<Answer> answers,
-      @JsonKey(name: 'rightAnswer')
-      @HiveField(3)
-          required this.rightAnswer,
-      @JsonKey(name: 'category')
-      @HiveField(4)
-          required this.category})
+      {@JsonKey(name: 'id') required this.id,
+      @JsonKey(name: 'sentence') required this.sentence,
+      @JsonKey(name: 'answers') required final List<Answer> answers,
+      @JsonKey(name: 'rightAnswer') required this.rightAnswer,
+      @JsonKey(name: 'category') required this.category})
       : _answers = answers;
 
   factory _$_Question.fromJson(Map<String, dynamic> json) =>
@@ -183,16 +167,13 @@ class _$_Question implements _Question {
 
   @override
   @JsonKey(name: 'id')
-  @HiveField(0)
-  final int id;
+  final String id;
   @override
   @JsonKey(name: 'sentence')
-  @HiveField(1)
   final String sentence;
   final List<Answer> _answers;
   @override
   @JsonKey(name: 'answers')
-  @HiveField(2)
   List<Answer> get answers {
     if (_answers is EqualUnmodifiableListView) return _answers;
     // ignore: implicit_dynamic_type
@@ -201,11 +182,9 @@ class _$_Question implements _Question {
 
   @override
   @JsonKey(name: 'rightAnswer')
-  @HiveField(3)
-  final int rightAnswer;
+  final String rightAnswer;
   @override
   @JsonKey(name: 'category')
-  @HiveField(4)
   final String category;
 
   @override
@@ -249,43 +228,28 @@ class _$_Question implements _Question {
 
 abstract class _Question implements Question {
   const factory _Question(
-      {@JsonKey(name: 'id')
-      @HiveField(0)
-          required final int id,
-      @JsonKey(name: 'sentence')
-      @HiveField(1)
-          required final String sentence,
-      @JsonKey(name: 'answers')
-      @HiveField(2)
-          required final List<Answer> answers,
-      @JsonKey(name: 'rightAnswer')
-      @HiveField(3)
-          required final int rightAnswer,
-      @JsonKey(name: 'category')
-      @HiveField(4)
-          required final String category}) = _$_Question;
+      {@JsonKey(name: 'id') required final String id,
+      @JsonKey(name: 'sentence') required final String sentence,
+      @JsonKey(name: 'answers') required final List<Answer> answers,
+      @JsonKey(name: 'rightAnswer') required final String rightAnswer,
+      @JsonKey(name: 'category') required final String category}) = _$_Question;
 
   factory _Question.fromJson(Map<String, dynamic> json) = _$_Question.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  @HiveField(0)
-  int get id;
+  String get id;
   @override
   @JsonKey(name: 'sentence')
-  @HiveField(1)
   String get sentence;
   @override
   @JsonKey(name: 'answers')
-  @HiveField(2)
   List<Answer> get answers;
   @override
   @JsonKey(name: 'rightAnswer')
-  @HiveField(3)
-  int get rightAnswer;
+  String get rightAnswer;
   @override
   @JsonKey(name: 'category')
-  @HiveField(4)
   String get category;
   @override
   @JsonKey(ignore: true)

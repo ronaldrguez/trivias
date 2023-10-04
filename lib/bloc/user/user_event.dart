@@ -3,10 +3,10 @@ part of 'user_bloc.dart';
 abstract class UserEvent {}
 
 class SignInEvent extends UserEvent {
-  final String user;
+  final String email;
   final String password;
 
-  SignInEvent(this.user, this.password);
+  SignInEvent(this.email, this.password);
 
 }
 

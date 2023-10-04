@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-var PRIMARY_COLOR = Colors.purple;
+/*var PRIMARY_COLOR = Colors.purple;
 var PRIMARY_DARK_COLOR = Colors.deepPurple.shade700;
 var FOCUS_COLOR = Colors.indigo;
 var ACCENT_COLOR = Colors.deepPurpleAccent.shade200;
-var ERROR_COLOR = Colors.red.shade700;
-
-ThemeData lightTheme = ThemeData(
+var ERROR_COLOR = Colors.red.shade700;*/
+ThemeData lightTheme = ThemeData.from(colorScheme: ColorScheme.fromSeed(seedColor: Colors.green));
+/*ThemeData(
   brightness: Brightness.light,
   primaryColor: PRIMARY_COLOR.shade200,
   focusColor: FOCUS_COLOR,
@@ -33,6 +33,7 @@ ThemeData lightTheme = ThemeData(
   floatingActionButtonTheme: FloatingActionButtonThemeData(
     backgroundColor: ACCENT_COLOR,
   ),
-);
+);*/
 
-ThemeData darkTheme = ThemeData(brightness: Brightness.dark);
+ThemeData darkTheme = ThemeData.from(colorScheme: ColorScheme.fromSeed(seedColor: Colors.green, brightness: Brightness.dark),);
+//ThemeData(brightness: Brightness.dark);

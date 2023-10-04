@@ -21,22 +21,16 @@ Trivia _$TriviaFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Trivia {
   @JsonKey(name: 'id')
-  @HiveField(0)
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'category')
-  @HiveField(1)
-  String get category => throw _privateConstructorUsedError;
+  CategoryTrivia get category => throw _privateConstructorUsedError;
   @JsonKey(name: 'questions')
-  @HiveField(2)
   List<Question> get questions => throw _privateConstructorUsedError;
   @JsonKey(name: 'duration')
-  @HiveField(3)
   int get duration => throw _privateConstructorUsedError;
   @JsonKey(name: 'answers')
-  @HiveField(4)
-  Map<int, int> get answers => throw _privateConstructorUsedError;
+  Map<String, String> get answers => throw _privateConstructorUsedError;
   @JsonKey(name: 'userId')
-  @HiveField(5)
   String get userId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -50,12 +44,14 @@ abstract class $TriviaCopyWith<$Res> {
       _$TriviaCopyWithImpl<$Res, Trivia>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') @HiveField(0) String id,
-      @JsonKey(name: 'category') @HiveField(1) String category,
-      @JsonKey(name: 'questions') @HiveField(2) List<Question> questions,
-      @JsonKey(name: 'duration') @HiveField(3) int duration,
-      @JsonKey(name: 'answers') @HiveField(4) Map<int, int> answers,
-      @JsonKey(name: 'userId') @HiveField(5) String userId});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'category') CategoryTrivia category,
+      @JsonKey(name: 'questions') List<Question> questions,
+      @JsonKey(name: 'duration') int duration,
+      @JsonKey(name: 'answers') Map<String, String> answers,
+      @JsonKey(name: 'userId') String userId});
+
+  $CategoryTriviaCopyWith<$Res> get category;
 }
 
 /// @nodoc
@@ -71,7 +67,7 @@ class _$TriviaCopyWithImpl<$Res, $Val extends Trivia>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? category = null,
     Object? questions = null,
     Object? duration = null,
@@ -79,14 +75,14 @@ class _$TriviaCopyWithImpl<$Res, $Val extends Trivia>
     Object? userId = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as String,
+              as CategoryTrivia,
       questions: null == questions
           ? _value.questions
           : questions // ignore: cast_nullable_to_non_nullable
@@ -98,12 +94,20 @@ class _$TriviaCopyWithImpl<$Res, $Val extends Trivia>
       answers: null == answers
           ? _value.answers
           : answers // ignore: cast_nullable_to_non_nullable
-              as Map<int, int>,
+              as Map<String, String>,
       userId: null == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CategoryTriviaCopyWith<$Res> get category {
+    return $CategoryTriviaCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value) as $Val);
+    });
   }
 }
 
@@ -114,12 +118,15 @@ abstract class _$$_TriviaCopyWith<$Res> implements $TriviaCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') @HiveField(0) String id,
-      @JsonKey(name: 'category') @HiveField(1) String category,
-      @JsonKey(name: 'questions') @HiveField(2) List<Question> questions,
-      @JsonKey(name: 'duration') @HiveField(3) int duration,
-      @JsonKey(name: 'answers') @HiveField(4) Map<int, int> answers,
-      @JsonKey(name: 'userId') @HiveField(5) String userId});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'category') CategoryTrivia category,
+      @JsonKey(name: 'questions') List<Question> questions,
+      @JsonKey(name: 'duration') int duration,
+      @JsonKey(name: 'answers') Map<String, String> answers,
+      @JsonKey(name: 'userId') String userId});
+
+  @override
+  $CategoryTriviaCopyWith<$Res> get category;
 }
 
 /// @nodoc
@@ -132,7 +139,7 @@ class __$$_TriviaCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? category = null,
     Object? questions = null,
     Object? duration = null,
@@ -140,14 +147,14 @@ class __$$_TriviaCopyWithImpl<$Res>
     Object? userId = null,
   }) {
     return _then(_$_Trivia(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as String,
+              as CategoryTrivia,
       questions: null == questions
           ? _value._questions
           : questions // ignore: cast_nullable_to_non_nullable
@@ -159,7 +166,7 @@ class __$$_TriviaCopyWithImpl<$Res>
       answers: null == answers
           ? _value._answers
           : answers // ignore: cast_nullable_to_non_nullable
-              as Map<int, int>,
+              as Map<String, String>,
       userId: null == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -170,27 +177,14 @@ class __$$_TriviaCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: HiveTypeHelper.triviaType, adapterName: 'TriviaAdapter')
 class _$_Trivia extends _Trivia {
   const _$_Trivia(
-      {@JsonKey(name: 'id')
-      @HiveField(0)
-          required this.id,
-      @JsonKey(name: 'category')
-      @HiveField(1)
-          required this.category,
-      @JsonKey(name: 'questions')
-      @HiveField(2)
-          required final List<Question> questions,
-      @JsonKey(name: 'duration')
-      @HiveField(3)
-          required this.duration,
-      @JsonKey(name: 'answers')
-      @HiveField(4)
-          required final Map<int, int> answers,
-      @JsonKey(name: 'userId')
-      @HiveField(5)
-          required this.userId})
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'category') required this.category,
+      @JsonKey(name: 'questions') required final List<Question> questions,
+      @JsonKey(name: 'duration') required this.duration,
+      @JsonKey(name: 'answers') required final Map<String, String> answers,
+      @JsonKey(name: 'userId') required this.userId})
       : _questions = questions,
         _answers = answers,
         super._();
@@ -200,16 +194,13 @@ class _$_Trivia extends _Trivia {
 
   @override
   @JsonKey(name: 'id')
-  @HiveField(0)
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'category')
-  @HiveField(1)
-  final String category;
+  final CategoryTrivia category;
   final List<Question> _questions;
   @override
   @JsonKey(name: 'questions')
-  @HiveField(2)
   List<Question> get questions {
     if (_questions is EqualUnmodifiableListView) return _questions;
     // ignore: implicit_dynamic_type
@@ -218,13 +209,11 @@ class _$_Trivia extends _Trivia {
 
   @override
   @JsonKey(name: 'duration')
-  @HiveField(3)
   final int duration;
-  final Map<int, int> _answers;
+  final Map<String, String> _answers;
   @override
   @JsonKey(name: 'answers')
-  @HiveField(4)
-  Map<int, int> get answers {
+  Map<String, String> get answers {
     if (_answers is EqualUnmodifiableMapView) return _answers;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_answers);
@@ -232,7 +221,6 @@ class _$_Trivia extends _Trivia {
 
   @override
   @JsonKey(name: 'userId')
-  @HiveField(5)
   final String userId;
 
   @override
@@ -283,51 +271,33 @@ class _$_Trivia extends _Trivia {
 
 abstract class _Trivia extends Trivia {
   const factory _Trivia(
-      {@JsonKey(name: 'id')
-      @HiveField(0)
-          required final String id,
-      @JsonKey(name: 'category')
-      @HiveField(1)
-          required final String category,
-      @JsonKey(name: 'questions')
-      @HiveField(2)
-          required final List<Question> questions,
-      @JsonKey(name: 'duration')
-      @HiveField(3)
-          required final int duration,
-      @JsonKey(name: 'answers')
-      @HiveField(4)
-          required final Map<int, int> answers,
-      @JsonKey(name: 'userId')
-      @HiveField(5)
-          required final String userId}) = _$_Trivia;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'category') required final CategoryTrivia category,
+      @JsonKey(name: 'questions') required final List<Question> questions,
+      @JsonKey(name: 'duration') required final int duration,
+      @JsonKey(name: 'answers') required final Map<String, String> answers,
+      @JsonKey(name: 'userId') required final String userId}) = _$_Trivia;
   const _Trivia._() : super._();
 
   factory _Trivia.fromJson(Map<String, dynamic> json) = _$_Trivia.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  @HiveField(0)
-  String get id;
+  String? get id;
   @override
   @JsonKey(name: 'category')
-  @HiveField(1)
-  String get category;
+  CategoryTrivia get category;
   @override
   @JsonKey(name: 'questions')
-  @HiveField(2)
   List<Question> get questions;
   @override
   @JsonKey(name: 'duration')
-  @HiveField(3)
   int get duration;
   @override
   @JsonKey(name: 'answers')
-  @HiveField(4)
-  Map<int, int> get answers;
+  Map<String, String> get answers;
   @override
   @JsonKey(name: 'userId')
-  @HiveField(5)
   String get userId;
   @override
   @JsonKey(ignore: true)

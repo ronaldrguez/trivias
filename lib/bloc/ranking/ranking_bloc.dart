@@ -14,11 +14,9 @@ class RankingBloc extends Bloc<RankingEvent,RankingState> {
     on<LoadingRankingEvent>((event, emit) async {
       try {
         emit(LoadRankingState());
-        final trivias = _repository.getAllTrivias();
+        final trivias = await _repository.getAllTrivias();
         final Set<User> users = <User>{};
-        for (var trivia in trivias) {
-          users.add(_repository.findUser(trivia.userId));
-        }
+        users.addAll(await _repository.getAllUsers());
         emit(InRankingState(
           trivias: trivias,
           users: users

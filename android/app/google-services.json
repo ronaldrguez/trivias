@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "613602946499",
+    "firebase_url": "https://api-trivias-default-rtdb.firebaseio.com",
+    "project_id": "api-trivias",
+    "storage_bucket": "api-trivias.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613602946499:android:0c69de6248a1f4c221a176",
+        "android_client_info": {
+          "package_name": "com.dev.ron.trivia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613602946499-59b0f87o42bgb5c2ncff9212culrvi3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgx-eFId2ZpMIPbAbcLv-WyzvD9pVg9Z0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613602946499-59b0f87o42bgb5c2ncff9212culrvi3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

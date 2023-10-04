@@ -16,7 +16,7 @@ class TriviaFormWidget extends StatefulWidget {
 }
 
 class _TriviaFormWidgetState extends State<TriviaFormWidget> {
-  int? _response;
+  String? _response;
   late Question _question;
 
   @override

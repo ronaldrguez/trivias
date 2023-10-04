@@ -1,39 +1,40 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
+import 'package:trivia/models/category_trivia.dart';
 import 'package:trivia/models/question.dart';
-import 'package:trivia/utils/helpers/hive_type_helper.dart';
 
 part 'trivia.freezed.dart';
 part 'trivia.g.dart';
 
-@Freezed(toJson: true)
+@Freezed()
 class Trivia with _$Trivia {
 
   const Trivia._();
 
-  @HiveType(typeId: HiveTypeHelper.triviaType, adapterName: 'TriviaAdapter')
   const factory Trivia({
     @JsonKey(name: 'id')
-    @HiveField(0)
-    required String id,
+    String? id,
     @JsonKey(name: 'category')
-    @HiveField(1)
-    required String category,
+    required CategoryTrivia category,
     @JsonKey(name: 'questions')
-    @HiveField(2)
     required List<Question> questions,
     @JsonKey(name: 'duration')
-    @HiveField(3)
     required int duration,
     @JsonKey(name: 'answers')
-    @HiveField(4)
-    required Map<int, int> answers,
+    required Map<String, String> answers,
     @JsonKey(name: 'userId')
-    @HiveField(5)
     required String userId
   }) = _Trivia;
 
   factory Trivia.fromJson(Map<String, dynamic> json) => _$TriviaFromJson(json);
+
+  @override
+  Map<String,dynamic> toJson() => {
+    'category': category,
+    'questions': questions.map((e) => e.toJson()).toList(),
+    'duration': duration,
+    'answers': answers,
+    'userId': userId,
+  };
 
   int get rightAnswers{
     int cont = 0;
@@ -47,5 +48,15 @@ class Trivia with _$Trivia {
 
   double get total {
     return (rightAnswers * 10000) / duration;
+  }
+
+  Map<String,dynamic> triviaToFirebase() {
+    return {
+      "category": category.id,
+      "questions": questions.map((e) => e.id),
+      "duration": duration,
+      "answers": answers,
+      "userId": userId
+    };
   }
 }

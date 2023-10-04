@@ -47,6 +47,7 @@ class _RegisterFormState extends State<RegisterForm> {
     controllers['name'] = TextEditingController(text: '');
     controllers['user'] = TextEditingController(text: '');
     controllers['password'] = TextEditingController(text: '');
+    controllers['email'] = TextEditingController(text: '');
     super.initState();
   }
 
@@ -100,6 +101,23 @@ class _RegisterFormState extends State<RegisterForm> {
                 height: 20,
               ),
               TextFormField(
+                controller: controllers['email'],
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  label: const Text('Email'),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(25.0),
+                    borderSide: BorderSide(
+                      color: Colors.tealAccent.shade400,
+                      width: 1.0,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              TextFormField(
                 controller: controllers['password'],
                 decoration: InputDecoration(
                   label: const Text('Password'),
@@ -113,6 +131,19 @@ class _RegisterFormState extends State<RegisterForm> {
                 ),
               ),
               const SizedBox(
+                height: 10,
+              ),
+              BlocBuilder(
+                  bloc: context.read<UserBloc>(),
+                  builder: (context, state) {
+                    if(state is InErrorState) {
+                      return Card(
+                        child: Text(state.message, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Theme.of(context).colorScheme.error),),
+                      );
+                    }
+                    return Container();
+                  }),
+              const SizedBox(
                 height: 40,
               ),
               Row(
@@ -123,7 +154,7 @@ class _RegisterFormState extends State<RegisterForm> {
                         final validForm = _key.currentState?.validate();
                         if (validForm ?? false) {
                           context.read<UserBloc>().add(
-                              SignUpEvent(User(id: User.generateId, name: controllers['name']!.text, userName: controllers['user']!.text, password: controllers['password']!.text, results: []))
+                              SignUpEvent(User(id: User.generateId, name: controllers['name']!.text,email: controllers['email']!.text, password: controllers['password']!.text,))
                           );
                           AppNavigator().pop();
                         }

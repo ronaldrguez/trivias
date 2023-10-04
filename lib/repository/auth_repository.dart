@@ -1,17 +1,17 @@
 import 'package:trivia/models/user.dart';
 import 'package:trivia/provider/auth_provider.dart';
-import 'package:trivia/provider/local/auth_local_provider.dart';
+import 'package:trivia/provider/online/auth_online_provider.dart';
 
 class AuthRepository {
   final AuthProvider provider;
 
-  const AuthRepository({this.provider = const AuthLocalProvider()});
+  const AuthRepository({this.provider = const AuthOnlineProvider()});
 
-  Future<User?> signIn(String user,String password) => provider.signIn(user,password);
+  Future<User?> signIn(String email,String password) => provider.signIn(email,password);
 
   Future<bool> signUp(User user) => provider.signUp(user);
 
   Future<bool> signOut() => provider.signOut();
 
-  Future<User?> keepLogin() => provider.keepLogin();
+  User? keepLogin() => provider.keepLogin();
 }

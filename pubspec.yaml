@@ -45,6 +45,12 @@ dependencies:
   app_navigator: ^0.0.5
   confetti: ^0.7.0
   flutter_screenutil: ^5.7.0
+  firebase_core: ^2.16.0
+  firebase_auth: ^4.10.0
+  cloud_firestore: ^4.9.2
+  firebase_ui_auth: ^1.8.0
+  internet_connection_checker: ^1.0.0+1
+  cloud_functions: ^4.4.2
 
 dev_dependencies:
   freezed: ^2.3.2

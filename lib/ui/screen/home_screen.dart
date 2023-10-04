@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trivia/bloc/ranking/ranking_bloc.dart';
 import 'package:trivia/bloc/trivia/trivia_bloc.dart';
+import 'package:trivia/bloc/user/user_bloc.dart';
+import 'package:trivia/models/category_trivia.dart';
 import 'package:trivia/ui/screen/trivia_form_screen.dart';
 import 'package:trivia/ui/widget/dialog_widget.dart';
 import 'package:trivia/ui/widget/ranking_list_widget.dart';
 import 'package:trivia/ui/widget/select_text_view.dart';
-import 'package:trivia/utils/enum/category.dart';
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
@@ -18,7 +18,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  String choice = 'Select';
+  CategoryTrivia? choice;
   late TriviaBloc bloc;
 
   @override
@@ -32,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Ranking'),
+        actions: [IconButton(onPressed: () => context.read<UserBloc>().add(SignOutEvent()), icon: const Icon(Icons.logout))],
       ),
       body: BlocBuilder<RankingBloc, RankingState>(
         bloc: context.read<RankingBloc>(),
@@ -56,13 +57,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _startTrivia() {
-    DialogService.chooseCategory(context, title: 'Choose category of trivia', content: SelectTextView(onChoose: (value)=> choice = value ?? 'Select'), onAccepted: () {
-      if(choice != CategoryEnum.select.value) {
-        bloc.add(LoadingTriviaEvent(category: choice));
-        AppNavigator().push(TriviaFormScreen(category: choice,), name: 'trivia_form');
-      } /*else {
-        DialogService.showInfo(context, title: 'Alert', content: const Text('You must choose a category'));
-      }*/
+    DialogService.chooseCategory(context, title: 'Choose category of trivia', content: SelectTextView(onChoose: (value)=> choice = value), onAccepted: () {
+      if(choice != null) {
+        bloc.add(LoadingTriviaEvent(category: choice!));
+        AppNavigator().push(TriviaFormScreen(category: choice!,), name: 'trivia_form');
+      }
     },);
   }
 }

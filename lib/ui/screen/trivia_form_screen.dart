@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trivia/bloc/trivia/trivia_bloc.dart';
+import 'package:trivia/models/category_trivia.dart';
 import 'package:trivia/ui/screen/complete_screen.dart';
 import 'package:trivia/ui/widget/trivia_form_widget.dart';
 
 class TriviaFormScreen extends StatefulWidget {
-  final String category;
+  final CategoryTrivia category;
   const TriviaFormScreen({super.key, required this.category});
 
 
@@ -22,19 +23,19 @@ class _TriviaFormScreenState extends State<TriviaFormScreen> {
       builder: (context, state) {
         if(state is InTriviaState) {
           return Scaffold(
-            appBar: AppBar(title: Text('Trivia of ${widget.category}'),),
+            appBar: AppBar(title: Text('Trivia of ${widget.category.sentence}'),),
             body: TriviaFormWidget(trivia: state.trivia, index: state.index,),
           );
         } else if(state is LoadTriviaState) {
           return Scaffold(
-            appBar: AppBar(title: Text('Trivia of ${widget.category}'),),
+            appBar: AppBar(title: Text('Trivia of ${widget.category.sentence}'),),
             body: const Center(child: CircularProgressIndicator(),),
           );
         } else if(state is CompleteTriviaState) {
           return CompleteScreen(trivia: state.trivia,);
         } else {
           return Scaffold(
-            appBar: AppBar(title: Text('Trivia of ${widget.category}'),),
+            appBar: AppBar(title: Text('Trivia of ${widget.category.sentence}'),),
             body: const Center(child: Text('An error has happens'),),
           );
         }

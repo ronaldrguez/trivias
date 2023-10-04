@@ -4,25 +4,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:trivia/bloc/ranking/ranking_bloc.dart';
 import 'package:trivia/bloc/trivia/trivia_bloc.dart';
 import 'package:trivia/bloc/user/user_bloc.dart';
+import 'package:trivia/provider/online/auth_online_provider.dart';
+import 'package:trivia/provider/online/trivia_online_provider.dart';
 import 'package:trivia/repository/auth_repository.dart';
 import 'package:trivia/repository/ranking_repository.dart';
 import 'package:trivia/repository/trivia_repository.dart';
 import 'package:trivia/ui/screen/home_screen.dart';
 import 'package:trivia/ui/screen/login_screen.dart';
 import 'package:trivia/utils/navigation_widget.dart';
-import 'package:trivia/utils/services/hive_service.dart';
+import 'package:trivia/utils/services/firebase_service.dart';
 import 'package:trivia/utils/theme/theme_manager.dart';
 import 'package:trivia/utils/theme/themes.dart';
 
-
 void main() {
-  initialization().then((value) => runApp(const MyApp()));
-}
-
-Future<void> initialization() async {
-  await HiveService.initHive();
-  await Future.delayed(const Duration(seconds: 5));
-  //TransformToSql();
+  runApp(const MyApp());
 }
 
 class AppPage extends Page {
@@ -49,7 +44,7 @@ class App extends StatelessWidget {
         builder: (context, state) {
           if (state is UnAuthUserState) {
             return const LoginScreen();
-          } else if(state is InAuthUserState){
+          } else if (state is InAuthUserState) {
             return const MyHomePage();
           } else {
             bloc.add(LoadingUserEvent());
@@ -91,25 +86,41 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-        designSize: const Size(370, 640),
-        minTextAdapt: true,
-        splitScreenMode: true,
-        builder: (context, _) => MultiBlocProvider(
-          providers: [
-            BlocProvider<UserBloc>(create: (_) => UserBloc(const AuthRepository())),
-            BlocProvider<RankingBloc>(create: (_) => RankingBloc(const RankingRepository())),
-            BlocProvider<TriviaBloc>(create: (_) => TriviaBloc(const TriviaRepository()),)
-          ],
-          child: MaterialApp(
-            title: 'Trivia Game',
-            theme: lightTheme,
-            darkTheme: darkTheme,
-            themeMode: _themeManager.themeMode,
-            home: const NavigationWidget(),
-          ),
-        )
+    return FutureBuilder(
+      future: FirebaseService.init(),
+      builder: (context, snapshot) {
+        if(snapshot.hasError) {
+          return Center(child: Text(snapshot.error.toString()),);
+        } else if(snapshot.connectionState == ConnectionState.done){
+          return ScreenUtilInit(
+            designSize: const Size(370, 640),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            builder: (context, _) => MultiBlocProvider(
+              providers: [
+                BlocProvider<UserBloc>(
+                    create: (_) => UserBloc(
+                        const AuthRepository(provider: AuthOnlineProvider()))),
+                BlocProvider<RankingBloc>(
+                    create: (_) => RankingBloc(const RankingRepository())),
+                BlocProvider<TriviaBloc>(
+                  create: (_) => TriviaBloc(
+                      const TriviaRepository(provider: TriviaOnlineProvider())),
+                )
+              ],
+              child: MaterialApp(
+                title: 'Trivia Game',
+                theme: lightTheme,
+                darkTheme: darkTheme,
+                themeMode: _themeManager.themeMode,
+                home: const NavigationWidget(),
+              ),
+            ),
+          );
+        }
+        return const Center(child: CircularProgressIndicator(),);
+
+      },
     );
   }
 }
-

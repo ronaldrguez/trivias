@@ -21,17 +21,25 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     });
 
     on<SignInEvent>((event, emit) async {
-      final user = await _repository.signIn(event.user, event.password);
-      if(user != null) {
-        emit(InAuthUserState(user));
-      } else {
-        emit(UnAuthUserState());
+      try {
+        final user = await _repository.signIn(event.email, event.password);
+        if(user != null) {
+          emit(InAuthUserState(user));
+        } else {
+          emit(UnAuthUserState());
+        }
+      } on Exception catch (e) {
+        emit(InErrorState(e.toString()));
       }
     });
 
     on<SignUpEvent>((event, emit) async {
-      await _repository.signUp(event.user);
-      emit(UnAuthUserState());
+      try {
+        await _repository.signUp(event.user);
+        emit(UnAuthUserState());
+      } on Exception catch (e) {
+        emit(InErrorState(e.toString()));
+      }
     });
 
     on<SignOutEvent>((event, emit) async {
