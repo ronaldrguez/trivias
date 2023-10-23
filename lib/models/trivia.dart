@@ -20,9 +20,11 @@ class Trivia with _$Trivia {
     @JsonKey(name: 'duration')
     required int duration,
     @JsonKey(name: 'answers')
-    required Map<String, String> answers,
+    required Map<String, dynamic> answers,
     @JsonKey(name: 'userId')
-    required String userId
+    required String userId,
+    @JsonKey(name: 'points')
+    required double points
   }) = _Trivia;
 
   factory Trivia.fromJson(Map<String, dynamic> json) => _$TriviaFromJson(json);
@@ -34,6 +36,7 @@ class Trivia with _$Trivia {
     'duration': duration,
     'answers': answers,
     'userId': userId,
+    'points': points,
   };
 
   int get rightAnswers{
@@ -56,7 +59,8 @@ class Trivia with _$Trivia {
       "questions": questions.map((e) => e.id),
       "duration": duration,
       "answers": answers,
-      "userId": userId
+      "userId": userId,
+      "points": points,
     };
   }
 }

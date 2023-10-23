@@ -29,9 +29,11 @@ mixin _$Trivia {
   @JsonKey(name: 'duration')
   int get duration => throw _privateConstructorUsedError;
   @JsonKey(name: 'answers')
-  Map<String, String> get answers => throw _privateConstructorUsedError;
+  Map<String, dynamic> get answers => throw _privateConstructorUsedError;
   @JsonKey(name: 'userId')
   String get userId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'points')
+  double get points => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -48,8 +50,9 @@ abstract class $TriviaCopyWith<$Res> {
       @JsonKey(name: 'category') CategoryTrivia category,
       @JsonKey(name: 'questions') List<Question> questions,
       @JsonKey(name: 'duration') int duration,
-      @JsonKey(name: 'answers') Map<String, String> answers,
-      @JsonKey(name: 'userId') String userId});
+      @JsonKey(name: 'answers') Map<String, dynamic> answers,
+      @JsonKey(name: 'userId') String userId,
+      @JsonKey(name: 'points') double points});
 
   $CategoryTriviaCopyWith<$Res> get category;
 }
@@ -73,6 +76,7 @@ class _$TriviaCopyWithImpl<$Res, $Val extends Trivia>
     Object? duration = null,
     Object? answers = null,
     Object? userId = null,
+    Object? points = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -94,11 +98,15 @@ class _$TriviaCopyWithImpl<$Res, $Val extends Trivia>
       answers: null == answers
           ? _value.answers
           : answers // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
+              as Map<String, dynamic>,
       userId: null == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as String,
+      points: null == points
+          ? _value.points
+          : points // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 
@@ -122,8 +130,9 @@ abstract class _$$_TriviaCopyWith<$Res> implements $TriviaCopyWith<$Res> {
       @JsonKey(name: 'category') CategoryTrivia category,
       @JsonKey(name: 'questions') List<Question> questions,
       @JsonKey(name: 'duration') int duration,
-      @JsonKey(name: 'answers') Map<String, String> answers,
-      @JsonKey(name: 'userId') String userId});
+      @JsonKey(name: 'answers') Map<String, dynamic> answers,
+      @JsonKey(name: 'userId') String userId,
+      @JsonKey(name: 'points') double points});
 
   @override
   $CategoryTriviaCopyWith<$Res> get category;
@@ -145,6 +154,7 @@ class __$$_TriviaCopyWithImpl<$Res>
     Object? duration = null,
     Object? answers = null,
     Object? userId = null,
+    Object? points = null,
   }) {
     return _then(_$_Trivia(
       id: freezed == id
@@ -166,11 +176,15 @@ class __$$_TriviaCopyWithImpl<$Res>
       answers: null == answers
           ? _value._answers
           : answers // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
+              as Map<String, dynamic>,
       userId: null == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as String,
+      points: null == points
+          ? _value.points
+          : points // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -183,8 +197,9 @@ class _$_Trivia extends _Trivia {
       @JsonKey(name: 'category') required this.category,
       @JsonKey(name: 'questions') required final List<Question> questions,
       @JsonKey(name: 'duration') required this.duration,
-      @JsonKey(name: 'answers') required final Map<String, String> answers,
-      @JsonKey(name: 'userId') required this.userId})
+      @JsonKey(name: 'answers') required final Map<String, dynamic> answers,
+      @JsonKey(name: 'userId') required this.userId,
+      @JsonKey(name: 'points') required this.points})
       : _questions = questions,
         _answers = answers,
         super._();
@@ -210,10 +225,10 @@ class _$_Trivia extends _Trivia {
   @override
   @JsonKey(name: 'duration')
   final int duration;
-  final Map<String, String> _answers;
+  final Map<String, dynamic> _answers;
   @override
   @JsonKey(name: 'answers')
-  Map<String, String> get answers {
+  Map<String, dynamic> get answers {
     if (_answers is EqualUnmodifiableMapView) return _answers;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_answers);
@@ -222,10 +237,13 @@ class _$_Trivia extends _Trivia {
   @override
   @JsonKey(name: 'userId')
   final String userId;
+  @override
+  @JsonKey(name: 'points')
+  final double points;
 
   @override
   String toString() {
-    return 'Trivia(id: $id, category: $category, questions: $questions, duration: $duration, answers: $answers, userId: $userId)';
+    return 'Trivia(id: $id, category: $category, questions: $questions, duration: $duration, answers: $answers, userId: $userId, points: $points)';
   }
 
   @override
@@ -241,7 +259,8 @@ class _$_Trivia extends _Trivia {
             (identical(other.duration, duration) ||
                 other.duration == duration) &&
             const DeepCollectionEquality().equals(other._answers, _answers) &&
-            (identical(other.userId, userId) || other.userId == userId));
+            (identical(other.userId, userId) || other.userId == userId) &&
+            (identical(other.points, points) || other.points == points));
   }
 
   @JsonKey(ignore: true)
@@ -253,7 +272,8 @@ class _$_Trivia extends _Trivia {
       const DeepCollectionEquality().hash(_questions),
       duration,
       const DeepCollectionEquality().hash(_answers),
-      userId);
+      userId,
+      points);
 
   @JsonKey(ignore: true)
   @override
@@ -275,8 +295,9 @@ abstract class _Trivia extends Trivia {
       @JsonKey(name: 'category') required final CategoryTrivia category,
       @JsonKey(name: 'questions') required final List<Question> questions,
       @JsonKey(name: 'duration') required final int duration,
-      @JsonKey(name: 'answers') required final Map<String, String> answers,
-      @JsonKey(name: 'userId') required final String userId}) = _$_Trivia;
+      @JsonKey(name: 'answers') required final Map<String, dynamic> answers,
+      @JsonKey(name: 'userId') required final String userId,
+      @JsonKey(name: 'points') required final double points}) = _$_Trivia;
   const _Trivia._() : super._();
 
   factory _Trivia.fromJson(Map<String, dynamic> json) = _$_Trivia.fromJson;
@@ -295,10 +316,13 @@ abstract class _Trivia extends Trivia {
   int get duration;
   @override
   @JsonKey(name: 'answers')
-  Map<String, String> get answers;
+  Map<String, dynamic> get answers;
   @override
   @JsonKey(name: 'userId')
   String get userId;
+  @override
+  @JsonKey(name: 'points')
+  double get points;
   @override
   @JsonKey(ignore: true)
   _$$_TriviaCopyWith<_$_Trivia> get copyWith =>

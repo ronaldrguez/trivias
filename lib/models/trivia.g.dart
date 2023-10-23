@@ -14,8 +14,9 @@ _$_Trivia _$$_TriviaFromJson(Map<String, dynamic> json) => _$_Trivia(
           .map((e) => Question.fromJson(e as Map<String, dynamic>))
           .toList(),
       duration: json['duration'] as int,
-      answers: Map<String, String>.from(json['answers'] as Map),
+      answers: json['answers'] as Map<String, dynamic>,
       userId: json['userId'] as String,
+      points: (json['points'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$$_TriviaToJson(_$_Trivia instance) => <String, dynamic>{
@@ -25,4 +26,5 @@ Map<String, dynamic> _$$_TriviaToJson(_$_Trivia instance) => <String, dynamic>{
       'duration': instance.duration,
       'answers': instance.answers,
       'userId': instance.userId,
+      'points': instance.points,
     };

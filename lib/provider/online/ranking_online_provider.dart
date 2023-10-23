@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:trivia/models/answer.dart';
 import 'package:trivia/models/category_trivia.dart';
@@ -77,7 +75,32 @@ class RankingOnlineProvider extends RankingProvider {
 
   @override
   Future<List<Trivia>> getAllTrivias() async {
-    var result = <Trivia>[];
+    List<Trivia> result = [];
+    final categories = await _getAllCategories();
+    final answers = await _getAllAnswers();
+    final questions = await _getAllQuestion(answers, categories);
+    var snapshot = await FirebaseFirestore.instance.collection('trivias').get();
+    for (var doc in snapshot.docs) {
+      var data = doc.data();
+      final questionsTrivia = <Question>[];
+      for (var id in data['questions']) {
+        var question = questions.firstWhere(
+          (element) => element.id == id,
+        );
+        questionsTrivia.add(question);
+      }
+      result.add(
+        Trivia(
+          category: categories
+              .firstWhere((element) => element.id == data['category']),
+          questions: questionsTrivia,
+          duration: data['duration'],
+          answers: data['answers'],
+          userId: data['userId'],
+          points: data['points'] ?? 0,
+        ),
+      );
+    }
     /*final categories = await _getAllCategories();
     final answers = await _getAllAnswers();
     final questions = await _getAllQuestion(answers, categories);

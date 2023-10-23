@@ -11,7 +11,7 @@ class RankingList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
       child: Column(children: [
         Container(
           margin: const EdgeInsets.symmetric(vertical: 5.0),

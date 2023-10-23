@@ -40,7 +40,7 @@ class TriviaOnlineProvider extends TriviaProvider{
     questions.shuffle();
     var user = FirebaseAuth.instance.currentUser;
     if (user != null) {
-      var trivia = Trivia(category: category, questions: questions.sublist(0,20), duration: 0, answers: <String,String>{}, userId: user.uid);
+      var trivia = Trivia(category: category, questions: questions.sublist(0,20), duration: 0, answers: <String,String>{}, userId: user.uid, points: 0);
       return trivia;
     }
     throw(Exception('You are not logged.'));
@@ -48,7 +48,7 @@ class TriviaOnlineProvider extends TriviaProvider{
 
   @override
   void saveTrivia(Trivia trivia) {
-    FirebaseFirestore.instance.collection('trivias').add(trivia.triviaToFirebase());
+    FirebaseFirestore.instance.collection('trivias').add(trivia.copyWith(points: trivia.total).triviaToFirebase());
   }
 
 }
