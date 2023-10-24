@@ -23,6 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
+    context.read<RankingBloc>().add(LoadingRankingEvent());
     bloc = context.read<TriviaBloc>();
     super.initState();
   }
