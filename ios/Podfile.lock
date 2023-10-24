@@ -639,7 +639,7 @@ PODS:
     - firebase_core
     - Flutter
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - cloud_functions (4.4.1):
+  - cloud_functions (4.4.2):
     - Firebase/Functions (= 10.15.0)
     - firebase_core
     - Flutter
@@ -663,7 +663,7 @@ PODS:
     - Firebase/Auth (= 10.15.0)
     - firebase_core
     - Flutter
-  - firebase_core (2.16.0):
+  - firebase_core (2.17.0):
     - Firebase/CoreOnly (= 10.15.0)
     - Flutter
   - firebase_dynamic_links (5.3.6):
@@ -864,11 +864,11 @@ SPEC CHECKSUMS:
   abseil: 926fb7a82dc6d2b8e1f2ed7f3a718bce691d1e46
   BoringSSL-GRPC: 3175b25143e648463a56daeaaa499c6cb86dad33
   cloud_firestore: ac000d8c5a79d57dc69238ea06bb422880fb825e
-  cloud_functions: 8e2371f08e3b37340cfbeb6745cc776300eda065
+  cloud_functions: 08ace63d643b1df7b9eb3ac93665506dff415dca
   desktop_webview_auth: d645139460ef203d50bd0cdb33356785dd939cce
   Firebase: 66043bd4579e5b73811f96829c694c7af8d67435
   firebase_auth: ca31bca59224dc727ea0df7f066f30158a8acc3b
-  firebase_core: 77172d0a9d8d19d07606e24406e4c2fc14d3265b
+  firebase_core: 28e84c2a4fcf6a50ef83f47b145ded8c1fa331e4
   firebase_dynamic_links: 27625ac999a9353d6e323c07db85c3b55c5c6839
   FirebaseAppCheckInterop: a8c555b1c2db1d9445e6c3a08a848167ddb7eb51
   FirebaseAuth: a55ec5f7f8a5b1c2dd750235c1bb419bfb642445

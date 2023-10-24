@@ -1,4 +1,5 @@
 import 'package:app_navigator/app_navigator.dart';
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trivia/bloc/user/user_bloc.dart';
@@ -70,6 +71,12 @@ class _RegisterFormState extends State<RegisterForm> {
               ),
               TextFormField(
                 controller: controllers['name'],
+                validator: (value) {
+                  if(value == '' || value == null) {
+                    return 'Empty field';
+                  }
+                  return null;
+                },
                 decoration: InputDecoration(
                   label: const Text('Name'),
                   border: OutlineInputBorder(
@@ -103,6 +110,14 @@ class _RegisterFormState extends State<RegisterForm> {
               TextFormField(
                 controller: controllers['email'],
                 keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if(value == '' || value == null) {
+                    return 'Empty field';
+                  } else if(!EmailValidator.validate(value)){
+                    return 'This field is only for email';
+                  }
+                  return null;
+                },
                 decoration: InputDecoration(
                   label: const Text('Email'),
                   border: OutlineInputBorder(
@@ -119,6 +134,14 @@ class _RegisterFormState extends State<RegisterForm> {
               ),
               TextFormField(
                 controller: controllers['password'],
+                validator: (value) {
+                  if(value == '' || value == null) {
+                    return 'Empty field';
+                  } else if(value.length < 8){
+                    return 'Password too short';
+                  }
+                  return null;
+                },
                 decoration: InputDecoration(
                   label: const Text('Password'),
                   border: OutlineInputBorder(
